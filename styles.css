@@ -56,7 +56,7 @@ h2::after {
 .chart-container canvas {
     width: 100% !important;
     max-width: 800px; /* Ajuste conforme necessário */
-    height: auto !important;
+    height: 400px !important;
     display: block;
 }
 

@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Reset básico */
 *, *::before, *::after {
     margin: 0;
@@ -96,24 +98,25 @@ h2::after {
     }
 }
 
-/* Estilo dos gráficos nas técnicas */
-/* Removido: Estilos específicos para gráficos das técnicas */
+/* Estilo dos cards */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
 
-/* Estilo dos gráficos nos estudos de caso */
-/* Removido: Estilos específicos para gráficos dos estudos de caso */
+.card-title {
+    color: #1abc9c;
+}
 
-/* Estilo dos modais */
-.modal-content {
-    background-color: #fff;
+.accordion-button {
+    font-weight: bold;
+}
+
+/* Estilo das imagens nos estudos de caso */
+.accordion-body img {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-}
-
-.modal-header {
-    border-bottom: none;
-}
-
-.modal-footer {
-    border-top: none;
 }
 
 /* Estilo dos botões */

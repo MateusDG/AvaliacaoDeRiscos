@@ -15,11 +15,13 @@
 </head>
 <body>
 
+    <!-- Cabeçalho -->
     <header class="bg-primary text-white text-center py-5">
         <h1>Avaliação de Riscos Sob Incertezas</h1>
         <p>Entenda como a incerteza impacta decisões e resultados através de técnicas interativas.</p>
     </header>
 
+    <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Riscos</a>
@@ -41,95 +43,146 @@
         </div>
     </nav>
 
+    <!-- Conteúdo Principal -->
     <main class="container my-5">
         <!-- Introdução -->
         <section id="introducao" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-info-circle"></i> Introdução</h2>
-            <p>A avaliação de riscos sob incertezas é uma prática essencial em diversas áreas, como negócios, finanças, engenharia e saúde. Compreender e quantificar os riscos associados a decisões pode ajudar indivíduos e organizações a mitigar impactos negativos e otimizar resultados. Este programa educativo visa fornecer uma compreensão abrangente sobre como identificar, analisar e gerenciar riscos em ambientes incertos.</p>
+            <p>A <strong>Avaliação de Riscos sob Incertezas</strong> é uma disciplina essencial para a tomada de decisões eficazes em ambientes onde os resultados são incertos. Compreender os riscos e suas possíveis variações permite que indivíduos e organizações planejem melhor suas estratégias, minimizem perdas e maximizem oportunidades.</p>
+            <p>Este recurso visa fornecer uma visão abrangente sobre como identificar, analisar e gerenciar riscos utilizando diversas metodologias, com foco especial na aplicação de simulações para entender a influência da incerteza nos resultados.</p>
         </section>
 
-        <!-- Conceitos Fundamentais -->
+        <!-- Conceitos -->
         <section id="conceitos" class="mb-5">
-            <h2 class="mb-4"><i class="fas fa-lightbulb"></i> Conceitos Fundamentais</h2>
-            <p><strong>Risco:</strong> Refere-se à probabilidade de ocorrência de um evento adverso que pode afetar os objetivos de um projeto ou negócio. Por exemplo, investir em ações de uma empresa pode oferecer altos retornos, mas também carrega o risco de perdas financeiras caso a empresa tenha um desempenho ruim.</p>
-            <p><strong>Incerteza:</strong> É a falta de certeza sobre eventos futuros, o que dificulta a previsão de resultados específicos. Por exemplo, a incerteza econômica global pode afetar o desempenho de mercados financeiros, tornando difícil prever com precisão o retorno sobre investimentos.</p>
-            <p><strong>Avaliação de Riscos:</strong> Processo de identificar, analisar e priorizar riscos, seguido pela aplicação de recursos para minimizar, monitorar e controlar a probabilidade ou impacto de eventos indesejados. Este processo ajuda na tomada de decisões informadas e na implementação de estratégias eficazes de mitigação.</p>
-            <p><strong>Simulação de Monte Carlo:</strong> Técnica estatística que utiliza a geração de números aleatórios para modelar a probabilidade de diferentes resultados em um processo que envolve incertezas. Essa simulação permite a criação de múltiplos cenários possíveis, fornecendo uma visão abrangente das variações nos resultados.</p>
+            <h2 class="mb-4"><i class="fas fa-book-open"></i> Conceitos</h2>
+            <div class="accordion" id="conceitosAccordion">
+                <!-- Probabilidade -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingProbabilidade">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProbabilidade" aria-expanded="true" aria-controls="collapseProbabilidade">
+                            Probabilidade
+                        </button>
+                    </h2>
+                    <div id="collapseProbabilidade" class="accordion-collapse collapse show" aria-labelledby="headingProbabilidade" data-bs-parent="#conceitosAccordion">
+                        <div class="accordion-body">
+                            Probabilidade é a medida da chance de ocorrência de um evento. No contexto de riscos, a probabilidade ajuda a quantificar a incerteza associada a diferentes cenários.
+                        </div>
+                    </div>
+                </div>
+                <!-- Impacto -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingImpacto">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseImpacto" aria-expanded="false" aria-controls="collapseImpacto">
+                            Impacto
+                        </button>
+                    </h2>
+                    <div id="collapseImpacto" class="accordion-collapse collapse" aria-labelledby="headingImpacto" data-bs-parent="#conceitosAccordion">
+                        <div class="accordion-body">
+                            Impacto refere-se à magnitude das consequências que um evento de risco pode ter sobre um projeto ou organização. Avaliar o impacto é crucial para priorizar quais riscos necessitam de maior atenção.
+                        </div>
+                    </div>
+                </div>
+                <!-- Incerteza -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingIncerteza">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIncerteza" aria-expanded="false" aria-controls="collapseIncerteza">
+                            Incerteza
+                        </button>
+                    </h2>
+                    <div id="collapseIncerteza" class="accordion-collapse collapse" aria-labelledby="headingIncerteza" data-bs-parent="#conceitosAccordion">
+                        <div class="accordion-body">
+                            Incerteza é a falta de certeza sobre eventos futuros. Na avaliação de riscos, a incerteza pode surgir de variáveis imprevisíveis que afetam os resultados, tornando a análise e a gestão de riscos ainda mais desafiadoras.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Técnicas -->
         <section id="tecnicas" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-tools"></i> Técnicas de Avaliação de Riscos</h2>
-            <p>Diversas técnicas podem ser utilizadas para avaliar riscos sob incertezas. Abaixo, detalhamos cada uma delas com explicações específicas e exemplos interativos para facilitar o entendimento.</p>
-
-            <div class="accordion" id="tecnicasAccordion">
-                <!-- Análise Qualitativa de Riscos -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="tecnicaOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            1. Análise Qualitativa de Riscos
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="tecnicaOne" 
-                        data-bs-parent="#tecnicasAccordion">
-                        <div class="accordion-body">
-                            <p>A <strong>Análise Qualitativa de Riscos</strong> envolve a identificação e avaliação dos riscos com base em sua probabilidade de ocorrência e impacto. Esta abordagem utiliza métodos não numéricos, como matrizes de risco, para priorizar os riscos e determinar quais requerem atenção imediata.</p>
-                            <p><strong>Exemplo Real:</strong> Em um projeto de desenvolvimento de software, a equipe pode identificar riscos como "atraso na entrega de componentes" ou "falta de recursos técnicos". Utilizando uma matriz de risco, esses riscos são classificados de acordo com sua probabilidade e impacto, permitindo que a equipe concentre esforços na mitigação dos riscos mais críticos.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Análise SWOT -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="analise-swot-exemplo.webp" class="card-img-top" alt="Análise SWOT">
+                        <div class="card-body">
+                            <h5 class="card-title">Análise SWOT</h5>
+                            <p class="card-text"><strong>Strengths (Forças)</strong>, <strong>Weaknesses (Fraquezas)</strong>, <strong>Opportunities (Oportunidades)</strong>, e <strong>Threats (Ameaças)</strong> são identificados para mapear fatores internos e externos que podem impactar o sucesso de um projeto ou organização.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Análise Quantitativa de Riscos -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="tecnicaTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            2. Análise Quantitativa de Riscos
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="tecnicaTwo" 
-                        data-bs-parent="#tecnicasAccordion">
-                        <div class="accordion-body">
-                            <p>A <strong>Análise Quantitativa de Riscos</strong> utiliza métodos matemáticos e estatísticos para quantificar a probabilidade e o impacto dos riscos identificados. Esta abordagem fornece uma medida numérica do risco, permitindo uma avaliação mais precisa e baseada em dados.</p>
-                            <p><strong>Exemplo Real:</strong> Em um projeto de construção, a equipe pode calcular a probabilidade de atraso devido a condições climáticas adversas e o impacto financeiro desse atraso. Utilizando técnicas estatísticas, como análise de distribuição de probabilidade, a equipe pode estimar o risco total e planejar contingências adequadas.</p>
+                <!-- FMEA -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/FMEA_Table.png/800px-FMEA_Table.png" class="card-img-top" alt="FMEA">
+                        <div class="card-body">
+                            <h5 class="card-title">FMEA (Failure Modes and Effects Analysis)</h5>
+                            <p class="card-text">FMEA é uma metodologia sistemática para identificar modos de falha potenciais em um sistema, produto ou processo, avaliando seus efeitos e priorizando as ações corretivas para mitigar os riscos associados.</p>
                         </div>
                     </div>
                 </div>
-
                 <!-- Simulação de Monte Carlo -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="tecnicaThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            3. Simulação de Monte Carlo
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="tecnicaThree" 
-                        data-bs-parent="#tecnicasAccordion">
-                        <div class="accordion-body">
-                            <p>A <strong>Simulação de Monte Carlo</strong> é uma técnica que utiliza a geração de números aleatórios para modelar a probabilidade de diferentes resultados em um processo que envolve incertezas. Esta simulação permite a criação de múltiplos cenários possíveis, fornecendo uma visão abrangente das variações nos resultados.</p>
-                            <p><strong>Exemplo Real:</strong> Em um investimento financeiro, a simulação de Monte Carlo pode ser usada para prever os possíveis retornos de um portfólio de ações, considerando diferentes taxas de crescimento e volatilidades do mercado. Isso ajuda os investidores a entenderem a distribuição de possíveis retornos e a tomarem decisões informadas.</p>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Monte_Carlo_Simulation.png/800px-Monte_Carlo_Simulation.png" class="card-img-top" alt="Simulação de Monte Carlo">
+                        <div class="card-body">
+                            <h5 class="card-title">Simulação de Monte Carlo</h5>
+                            <p class="card-text">A Simulação de Monte Carlo utiliza a geração de números aleatórios para modelar e analisar a probabilidade de diferentes resultados em processos complexos, ajudando a entender como a incerteza afeta os resultados finais.</p>
                         </div>
                     </div>
                 </div>
-
                 <!-- Análise de Cenários -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="tecnicaFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            4. Análise de Cenários
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="tecnicaFour" 
-                        data-bs-parent="#tecnicasAccordion">
-                        <div class="accordion-body">
-                            <p>A <strong>Análise de Cenários</strong> envolve a criação de diferentes cenários futuros para avaliar como diferentes fatores podem afetar os resultados. Esta metodologia ajuda a preparar estratégias para lidar com diversas situações possíveis.</p>
-                            <p><strong>Exemplo Real:</strong> Em planejamento estratégico de uma empresa, a análise de cenários pode considerar diferentes condições de mercado, como crescimento econômico, recessão ou mudanças tecnológicas. A empresa pode então desenvolver planos de ação específicos para cada cenário, garantindo maior resiliência frente a incertezas.</p>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Scenario_analysis.png/800px-Scenario_analysis.png" class="card-img-top" alt="Análise de Cenários">
+                        <div class="card-body">
+                            <h5 class="card-title">Análise de Cenários</h5>
+                            <p class="card-text">Consiste em desenvolver e avaliar diferentes cenários futuros possíveis para entender como variações em determinadas variáveis podem impactar o projeto ou organização.</p>
                         </div>
                     </div>
                 </div>
+                <!-- Diagrama de Ishikawa -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ishikawa_diagram.svg/800px-Ishikawa_diagram.svg.png" class="card-img-top" alt="Diagrama de Ishikawa">
+                        <div class="card-body">
+                            <h5 class="card-title">Diagrama de Ishikawa</h5>
+                            <p class="card-text">Também conhecido como diagrama de causa e efeito ou diagrama espinha de peixe, é utilizado para identificar, explorar e representar graficamente todas as possíveis causas de um determinado problema ou evento de risco.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Análise de Sensibilidade -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Sensitivity_analysis.svg/800px-Sensitivity_analysis.svg.png" class="card-img-top" alt="Análise de Sensibilidade">
+                        <div class="card-body">
+                            <h5 class="card-title">Análise de Sensibilidade</h5>
+                            <p class="card-text">Avalia como as variações em uma ou mais variáveis de entrada afetam o resultado final, identificando quais fatores têm maior impacto sobre o risco.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Matriz de Risco -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Risk_matrix.svg/800px-Risk_matrix.svg.png" class="card-img-top" alt="Matriz de Risco">
+                        <div class="card-body">
+                            <h5 class="card-title">Matriz de Risco</h5>
+                            <p class="card-text">Ferramenta visual que classifica os riscos com base na sua probabilidade de ocorrência e no impacto que podem causar, facilitando a priorização das ações de mitigação.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Análise de Valor Esperado -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Expected_value_calculation.svg/800px-Expected_value_calculation.svg.png" class="card-img-top" alt="Análise de Valor Esperado">
+                        <div class="card-body">
+                            <h5 class="card-title">Análise de Valor Esperado</h5>
+                            <p class="card-text">Calcula o valor esperado de diferentes resultados possíveis, ponderando-os pela sua probabilidade de ocorrência, para auxiliar na tomada de decisões baseadas em risco.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione mais técnicas conforme necessário -->
             </div>
         </section>
 
@@ -171,8 +224,9 @@
                 <p><strong>Capital Final:</strong> R$ <span id="capitalFinal">0.00</span></p>
             </div>
 
-            <div class="mt-4 chart-container ">
-                <canvas id="resultadoChart" ></canvas>
+            <!-- Gráfico da Simulação -->
+            <div class="mt-4 chart-container">
+                <canvas id="resultadoChart"></canvas>
                 <p class="canvas-description"><strong>Figura 5:</strong> Evolução do capital ao longo dos jogos, comparando com o capital inicial.</p>
             </div>
         </section>
@@ -180,129 +234,94 @@
         <!-- Estudos de Caso -->
         <section id="estudos" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-briefcase"></i> Estudos de Caso</h2>
-            <p>Para ilustrar a aplicação das técnicas de avaliação de riscos sob incertezas, apresentamos casos reais com interações que facilitam o aprendizado:</p>
             <div class="accordion" id="estudosAccordion">
-                <!-- Investimento Financeiro -->
+                <!-- Estudo de Caso 1 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="estudoOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#estudoCollapseOne" aria-expanded="false" aria-controls="estudoCollapseOne">
-                            1. Investimento Financeiro
+                    <h2 class="accordion-header" id="headingEstudo1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstudo1" aria-expanded="false" aria-controls="collapseEstudo1">
+                            Estudo de Caso 1: Projeto de Construção
                         </button>
                     </h2>
-                    <div id="estudoCollapseOne" class="accordion-collapse collapse" aria-labelledby="estudoOne" 
-                        data-bs-parent="#estudosAccordion">
+                    <div id="collapseEstudo1" class="accordion-collapse collapse" aria-labelledby="headingEstudo1" data-bs-parent="#estudosAccordion">
                         <div class="accordion-body">
-                            <p><strong>Descrição:</strong> Avaliar o risco de retorno de um portfólio de ações considerando a volatilidade do mercado.</p>
-                            <p><strong>Interação:</strong> Clique no botão abaixo para visualizar uma simulação interativa que demonstra como diferentes taxas de crescimento e volatilidades afetam os retornos do portfólio.</p>
-                            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalInvestimento">Ver Simulação</button>
-
-                            <!-- Modal da Simulação de Investimento Financeiro -->
-                            <div class="modal fade" id="modalInvestimento" tabindex="-1" aria-labelledby="modalInvestimentoLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalInvestimentoLabel">Simulação de Investimento Financeiro</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Nesta simulação, observamos como diferentes taxas de crescimento anual e níveis de volatilidade podem impactar o retorno de um portfólio de ações ao longo de 10 anos.</p>
-                                            <div class="chart-container">
-                                                <canvas id="investimentoChart"></canvas>
-                                                <p class="canvas-description"><strong>Figura 6:</strong> Simulação do retorno de investimento financeiro ao longo de 10 anos com diferentes taxas de crescimento.</p>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Construction_project_management.png/800px-Construction_project_management.png" class="img-fluid rounded mb-3" alt="Projeto de Construção">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Neste estudo de caso, analisamos um projeto de construção que enfrenta diversas incertezas, como variações nos custos de materiais e atrasos no cronograma. Utilizamos a <strong>Simulação de Monte Carlo</strong> para prever possíveis resultados financeiros e cronológicos, ajudando a equipe a tomar decisões informadas para mitigar riscos.</p>
+                                    <ul>
+                                        <li><strong>Identificação de Riscos:</strong> Custos de materiais, atrasos na entrega, condições climáticas.</li>
+                                        <li><strong>Análise:</strong> Avaliação da probabilidade e impacto de cada risco identificado.</li>
+                                        <li><strong>Mitigação:</strong> Estratégias para reduzir a probabilidade ou impacto dos riscos.</li>
+                                        <li><strong>Resultados:</strong> Previsão de custos e cronograma ajustados com base na simulação.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Projetos de Engenharia -->
+                <!-- Estudo de Caso 2 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="estudoTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#estudoCollapseTwo" aria-expanded="false" aria-controls="estudoCollapseTwo">
-                            2. Projetos de Engenharia
+                    <h2 class="accordion-header" id="headingEstudo2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstudo2" aria-expanded="false" aria-controls="collapseEstudo2">
+                            Estudo de Caso 2: Lançamento de Produto
                         </button>
                     </h2>
-                    <div id="estudoCollapseTwo" class="accordion-collapse collapse" aria-labelledby="estudoTwo" 
-                        data-bs-parent="#estudosAccordion">
+                    <div id="collapseEstudo2" class="accordion-collapse collapse" aria-labelledby="headingEstudo2" data-bs-parent="#estudosAccordion">
                         <div class="accordion-body">
-                            <p><strong>Descrição:</strong> Analisar riscos relacionados a prazos e custos de um projeto de construção.</p>
-                            <p><strong>Interação:</strong> Passe o mouse sobre os diferentes pontos do gráfico abaixo para ver como atrasos na entrega de materiais e imprevistos técnicos impactam o cronograma e o orçamento.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Saúde Pública -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="estudoThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#estudoCollapseThree" aria-expanded="false" aria-controls="estudoCollapseThree">
-                            3. Saúde Pública
-                        </button>
-                    </h2>
-                    <div id="estudoCollapseThree" class="accordion-collapse collapse" aria-labelledby="estudoThree" 
-                        data-bs-parent="#estudosAccordion">
-                        <div class="accordion-body">
-                            <p><strong>Descrição:</strong> Modelar a propagação de uma doença e os impactos de diferentes intervenções.</p>
-                            <p><strong>Interação:</strong> Clique no botão abaixo para ver como diferentes estratégias de intervenção (como quarentenas e vacinação) podem controlar a propagação de uma epidemia.</p>
-                            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalSaudePublica">Ver Simulação</button>
-
-                            <!-- Modal da Simulação de Saúde Pública -->
-                            <div class="modal fade" id="modalSaudePublica" tabindex="-1" aria-labelledby="modalSaudePublicaLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modalSaudePublicaLabel">Simulação de Saúde Pública</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Nesta simulação, analisamos como diferentes estratégias de intervenção podem afetar a propagação de uma epidemia ao longo de 12 meses.</p>
-                                            <div class="chart-container">
-                                                <canvas id="saudePublicaChart"></canvas>
-                                                <p class="canvas-description"><strong>Figura 8:</strong> Gráfico de Barras mostrando a propagação de casos de uma doença sob diferentes estratégias de intervenção.</p>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Product_launch_flowchart.png/800px-Product_launch_flowchart.png" class="img-fluid rounded mb-3" alt="Lançamento de Produto">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Este estudo de caso foca no lançamento de um novo produto no mercado, onde incertezas como a aceitação do consumidor e a concorrência impactam o sucesso. Através de diversas técnicas de avaliação de riscos, incluindo <strong>Análise SWOT</strong> e <strong>Simulação de Monte Carlo</strong>, identificamos estratégias para maximizar as chances de sucesso e minimizar possíveis falhas.</p>
+                                    <ul>
+                                        <li><strong>Identificação de Riscos:</strong> Aceitação do mercado, concorrência, custos de marketing.</li>
+                                        <li><strong>Análise:</strong> Uso da Análise SWOT para mapear forças e fraquezas internas, oportunidades e ameaças externas.</li>
+                                        <li><strong>Simulação:</strong> Modelagem de diferentes cenários de vendas e impacto no retorno financeiro.</li>
+                                        <li><strong>Mitigação:</strong> Planejamento de campanhas de marketing eficazes e ajustes no produto com base no feedback do mercado.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Gestão de Projetos -->
+                <!-- Estudo de Caso 3 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="estudoFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#estudoCollapseFour" aria-expanded="false" aria-controls="estudoCollapseFour">
-                            4. Gestão de Projetos
+                    <h2 class="accordion-header" id="headingEstudo3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstudo3" aria-expanded="false" aria-controls="collapseEstudo3">
+                            Estudo de Caso 3: Desenvolvimento de Software
                         </button>
                     </h2>
-                    <div id="estudoCollapseFour" class="accordion-collapse collapse" aria-labelledby="estudoFour" 
-                        data-bs-parent="#estudosAccordion">
+                    <div id="collapseEstudo3" class="accordion-collapse collapse" aria-labelledby="headingEstudo3" data-bs-parent="#estudosAccordion">
                         <div class="accordion-body">
-                            <p><strong>Descrição:</strong> Identificar e mitigar riscos que podem afetar o sucesso de um projeto empresarial.</p>
-                            <p><strong>Interação:</strong> Utilize os tooltips nos segmentos do gráfico abaixo para descobrir como diferentes riscos (como falhas de comunicação e mudanças nos requisitos) podem impactar o sucesso do projeto.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Software_development_process.png/800px-Software_development_process.png" class="img-fluid rounded mb-3" alt="Desenvolvimento de Software">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Este estudo de caso analisa um projeto de desenvolvimento de software que enfrenta incertezas como mudanças nos requisitos do cliente e falhas técnicas. Utilizamos a <strong>Análise de Valor Esperado</strong> e a <strong>Simulação de Monte Carlo</strong> para prever possíveis atrasos e custos adicionais, permitindo que a equipe de desenvolvimento implemente medidas preventivas eficazes.</p>
+                                    <ul>
+                                        <li><strong>Identificação de Riscos:</strong> Mudanças nos requisitos, falhas de software, atrasos na entrega.</li>
+                                        <li><strong>Análise:</strong> Avaliação das probabilidades e impactos utilizando a Análise de Valor Esperado.</li>
+                                        <li><strong>Mitigação:</strong> Planejamento de sprints flexíveis e implementação de testes contínuos para detectar falhas precocemente.</li>
+                                        <li><strong>Resultados:</strong> Previsão de atrasos e ajustes no cronograma para garantir a entrega dentro do prazo e orçamento.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Adicione mais estudos de caso conforme necessário -->
             </div>
         </section>
 
         <!-- Conclusão -->
         <section id="conclusao" class="mb-5">
-            <h2 class="mb-4"><i class="fas fa-check-circle"></i> Conclusão</h2>
-            <p>A avaliação de riscos sob incertezas é uma ferramenta poderosa que auxilia na compreensão e gestão de riscos em diversos contextos. Através de técnicas como a Simulação de Monte Carlo, é possível visualizar e quantificar a variabilidade dos resultados, permitindo decisões mais embasadas e estratégicas.</p>
-            <p>Incorporar a avaliação de riscos nas práticas diárias contribui para a resiliência e sustentabilidade de projetos e organizações, minimizando impactos negativos e potencializando oportunidades. Este programa educativo busca fornecer as ferramentas e conhecimentos necessários para que indivíduos e profissionais possam aplicar essas técnicas de forma eficaz em suas respectivas áreas.</p>
+            <h2 class="mb-4"><i class="fas fa-clipboard-check"></i> Conclusão</h2>
+            <p>A avaliação de riscos sob incertezas é fundamental para a gestão eficaz de projetos e operações em qualquer organização. Compreender e aplicar técnicas apropriadas permite identificar potenciais ameaças e oportunidades, facilitando a tomada de decisões informadas e a implementação de estratégias de mitigação.</p>
+            <p>A utilização de ferramentas interativas, como a Simulação de Monte Carlo, enriquece o processo de avaliação, proporcionando uma visão mais clara das possíveis variações e ajudando a antecipar desafios futuros. A educação contínua e a prática dessas metodologias são essenciais para aprimorar a capacidade de gerenciar riscos em ambientes complexos e dinâmicos.</p>
         </section>
 
         <!-- Recursos Adicionais -->
@@ -319,10 +338,12 @@
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Avaliação de Riscos Sob Incerteza</p>
     </footer>
 
+    <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

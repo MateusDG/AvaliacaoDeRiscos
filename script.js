@@ -1,3 +1,5 @@
+// script.js
+
 // Variável global para armazenar o gráfico da simulação
 let simChart;
 
@@ -192,19 +194,21 @@ window.onload = function() {
     document.getElementById('probErro').value = "0";
     document.getElementById('probAcerto').value = "100";
 
-    // Inicializar os gráficos das técnicas
+    // Inicializar os gráficos das técnicas (funcionalidade futura)
     inicializarTecnicas();
 
-    // Inicializar os gráficos dos estudos de caso
+    // Inicializar os gráficos dos estudos de caso (funcionalidade futura)
     inicializarEstudosCaso();
 };
 
 // Função para inicializar os gráficos das técnicas
 function inicializarTecnicas() {
-    // Removido: Inicialização dos gráficos interativos das técnicas de avaliação de riscos
+    // Aqui você pode adicionar funcionalidades interativas para as técnicas, como gráficos ou infográficos.
+    // Exemplo: Criar gráficos que ilustram cada técnica de avaliação de riscos.
 }
 
 // Função para inicializar os gráficos dos estudos de caso
 function inicializarEstudosCaso() {
-    // Removido: Inicialização dos gráficos interativos dos estudos de caso
+    // Aqui você pode adicionar funcionalidades interativas para os estudos de caso, como gráficos ou infográficos.
+    // Exemplo: Apresentar resultados de simulações específicas para cada estudo de caso.
 }

@@ -77,8 +77,8 @@ function desenharGrafico(dados, capitalInicial) {
             ]
         },
         options: {
-            responsive: true, // Garante que o gráfico seja responsivo
-            maintainAspectRatio: false, // Permite que o gráfico se ajuste ao contêiner
+            responsive: true, 
+            maintainAspectRatio: false, 
             scales: {
                 x: {
                     title: {
@@ -115,14 +115,13 @@ function desenharGrafico(dados, capitalInicial) {
 
 // Função para exibir resultados de acertos e erros na página
 function exibirResultados(acertos, erros, capitalFinal) {
-    const resultsDiv = document.getElementById('simulationResults');
     document.getElementById('totalJogos').textContent = acertos + erros;
     document.getElementById('totalAcertos').textContent = acertos;
     document.getElementById('totalErros').textContent = erros;
     document.getElementById('capitalFinal').textContent = capitalFinal.toFixed(2);
 
     // Mostrar a div de resultados
-    resultsDiv.style.display = 'block';
+    document.getElementById('simulationResults').style.display = 'block';
 }
 
 // Função para sincronizar as probabilidades
@@ -186,29 +185,3 @@ document.getElementById('simulationForm').addEventListener('submit', function(e)
 
 // Adicionar eventos para sincronizar as probabilidades
 document.getElementById('probErro').addEventListener('input', sincronizarProbabilidades);
-// O campo probAcerto está definido como readonly, não é necessário adicionar um listener
-
-// Inicializar os campos de probabilidade e gráficos das técnicas e estudos de caso
-window.onload = function() {
-    // Inicialmente, probErro = 0 e probAcerto = 100
-    document.getElementById('probErro').value = "0";
-    document.getElementById('probAcerto').value = "100";
-
-    // Inicializar os gráficos das técnicas (funcionalidade futura)
-    inicializarTecnicas();
-
-    // Inicializar os gráficos dos estudos de caso (funcionalidade futura)
-    inicializarEstudosCaso();
-};
-
-// Função para inicializar os gráficos das técnicas
-function inicializarTecnicas() {
-    // Aqui você pode adicionar funcionalidades interativas para as técnicas, como gráficos ou infográficos.
-    // Exemplo: Criar gráficos que ilustram cada técnica de avaliação de riscos.
-}
-
-// Função para inicializar os gráficos dos estudos de caso
-function inicializarEstudosCaso() {
-    // Aqui você pode adicionar funcionalidades interativas para os estudos de caso, como gráficos ou infográficos.
-    // Exemplo: Apresentar resultados de simulações específicas para cada estudo de caso.
-}

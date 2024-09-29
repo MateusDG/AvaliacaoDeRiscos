@@ -230,31 +230,6 @@ document.getElementById('simulationForm').addEventListener('submit', function(e)
     exibirResultados(simulacoes);
 });
 
-// Adicionar eventos para sincronizar as probabilidades
 document.getElementById('probErro').addEventListener('input', sincronizarProbabilidades);
-// O campo probAcerto está definido como readonly, não é necessário adicionar um listener
 
-// Inicializar os campos de probabilidade e gráficos das técnicas e estudos de caso
-window.onload = function() {
-    // Inicialmente, probErro = 50 e probAcerto = 50
-    document.getElementById('probErro').value = "50";
-    document.getElementById('probAcerto').value = "50";
 
-    // Inicializar os gráficos das técnicas (funcionalidade futura)
-    inicializarTecnicas();
-
-    // Inicializar os gráficos dos estudos de caso (funcionalidade futura)
-    inicializarEstudosCaso();
-};
-
-// Função para inicializar os gráficos das técnicas
-function inicializarTecnicas() {
-    // Aqui você pode adicionar funcionalidades interativas para as técnicas, como gráficos ou infográficos.
-    // Exemplo: Criar gráficos que ilustram cada técnica de avaliação de riscos.
-}
-
-// Função para inicializar os gráficos dos estudos de caso
-function inicializarEstudosCaso() {
-    // Aqui você pode adicionar funcionalidades interativas para os estudos de caso, como gráficos ou infográficos.
-    // Exemplo: Apresentar resultados de simulações específicas para cada estudo de caso.
-}

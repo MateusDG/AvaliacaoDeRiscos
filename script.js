@@ -38,43 +38,58 @@ function runSimulation(capitalInicial, valorJogo, probErro, probAcerto, numJogos
     return { resultados, acertos, erros };
 }
 
+// Função para gerar cores aleatórias para os jogadores
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 200) + 50; // Evita cores muito claras
+    const g = Math.floor(Math.random() * 200) + 50;
+    const b = Math.floor(Math.random() * 200) + 50;
+    return `rgba(${r}, ${g}, ${b}, 1)`;
+}
+
 // Função para desenhar o gráfico da simulação
-function desenharGrafico(dados, capitalInicial) {
+function desenharGrafico(dadosArray, capitalInicial) {
     const ctx = document.getElementById('resultadoChart').getContext('2d');
 
     // Destruir gráfico anterior se existir
     if (simChart != undefined) 
         simChart.destroy();
 
+    // Supondo que todos os jogadores têm o mesmo número de jogos
+    const numJogos = dadosArray[0].resultados.length;
+    const labels = Array.from({length: numJogos}, (_, i) => i + 1);
+
     // Criar a linha de referência do capital inicial
-    const linhaCapitalInicial = Array(dados.resultados.length).fill(capitalInicial);
+    const linhaCapitalInicial = Array(numJogos).fill(capitalInicial);
+
+    // Preparar datasets para cada jogador
+    const datasets = dadosArray.map((dados, index) => ({
+        label: `Jogador ${index + 1}`,
+        data: dados.resultados,
+        borderColor: getRandomColor(),
+        backgroundColor: 'rgba(0,0,0,0)', // Remover preenchimento
+        borderWidth: 2,
+        pointRadius: 0,
+        fill: false,
+        tension: 0.3
+    }));
+
+    // Adicionar a linha de referência
+    datasets.push({
+        label: 'Capital Inicial (R$)',
+        data: linhaCapitalInicial,
+        borderColor: 'rgba(52, 73, 94, 1)', // Cor da linha de referência
+        borderDash: [10,5],
+        borderWidth: 2,
+        pointRadius: 0,
+        fill: false,
+        tension: 0
+    });
 
     simChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: dados.resultados.map((_, index) => index + 1),
-            datasets: [
-                {
-                    label: 'Capital ao Longo dos Jogos (R$)',
-                    data: dados.resultados,
-                    borderColor: 'rgba(26, 188, 156, 1)', // Cor da linha principal
-                    backgroundColor: 'rgba(26, 188, 156, 0)', // Removendo o preenchimento
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    fill: false, // Desativando o preenchimento
-                    tension: 0.3
-                },
-                {
-                    label: 'Capital Inicial (R$)',
-                    data: linhaCapitalInicial,
-                    borderColor: 'rgba(52, 73, 94, 1)', // Cor da linha de referência
-                    borderDash: [10,5],
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    fill: false, // Garantindo que não haja preenchimento
-                    tension: 0
-                }
-            ]
+            labels: labels,
+            datasets: datasets
         },
         options: {
             responsive: true, // Garante que o gráfico seja responsivo
@@ -113,14 +128,35 @@ function desenharGrafico(dados, capitalInicial) {
     });
 }
 
-
 // Função para exibir resultados de acertos e erros na página
-function exibirResultados(acertos, erros, capitalFinal) {
+function exibirResultados(dadosArray) {
     const resultsDiv = document.getElementById('simulationResults');
-    document.getElementById('totalJogos').textContent = acertos + erros;
-    document.getElementById('totalAcertos').textContent = acertos;
-    document.getElementById('totalErros').textContent = erros;
-    document.getElementById('capitalFinal').textContent = capitalFinal.toFixed(2);
+    const totalJogosSpan = document.getElementById('totalJogos');
+    const totalAcertosSpan = document.getElementById('totalAcertos');
+    const totalErrosSpan = document.getElementById('totalErros');
+    const capitalFinalSpan = document.getElementById('capitalFinal');
+
+    // Calcular totais agregados
+    let totalJogos = 0;
+    let totalAcertos = 0;
+    let totalErros = 0;
+    let capitalFinalTotal = 0;
+
+    dadosArray.forEach(dados => {
+        totalJogos += dados.acertos + dados.erros;
+        totalAcertos += dados.acertos;
+        totalErros += dados.erros;
+        capitalFinalTotal += dados.resultados[dados.resultados.length - 1];
+    });
+
+    // Calcular média de capital final
+    const numJogadores = dadosArray.length;
+    const capitalFinalMedio = capitalFinalTotal / numJogadores;
+
+    document.getElementById('totalJogos').textContent = totalJogos;
+    document.getElementById('totalAcertos').textContent = totalAcertos;
+    document.getElementById('totalErros').textContent = totalErros;
+    document.getElementById('capitalFinal').textContent = `${capitalFinalMedio.toFixed(2)} (Média de ${numJogadores} jogadores)`;
 
     // Mostrar a div de resultados
     resultsDiv.style.display = 'block';
@@ -153,8 +189,9 @@ document.getElementById('simulationForm').addEventListener('submit', function(e)
     const probErro = parseFloat(document.getElementById('probErro').value);
     const probAcerto = parseFloat(document.getElementById('probAcerto').value);
     const numJogos = parseInt(document.getElementById('numJogos').value);
+    const numJogadores = parseInt(document.getElementById('numJogadores').value);
 
-    console.log(`Formulário submetido com: Capital Inicial = R$ ${capitalInicial}, Valor por Jogo = R$ ${valorJogo}, Prob Erro = ${probErro}%, Prob Acerto = ${probAcerto}%, Número de Jogos = ${numJogos}`);
+    console.log(`Formulário submetido com: Capital Inicial = R$ ${capitalInicial}, Valor por Jogo = R$ ${valorJogo}, Prob Erro = ${probErro}%, Prob Acerto = ${probAcerto}%, Número de Jogos = ${numJogos}, Número de Jogadores = ${numJogadores}`);
 
     // Validação básica
     if (probErro + probAcerto !== 100) {
@@ -162,27 +199,35 @@ document.getElementById('simulationForm').addEventListener('submit', function(e)
         return;
     }
 
-    if (capitalInicial < 0 || valorJogo < 0 || numJogos <= 0) {
-        alert('Os valores de Capital Inicial, Valor por Jogo devem ser iguais ou maiores que 0, e o Número de Jogos deve ser maior que 0.');
+    if (capitalInicial < 0 || valorJogo < 0 || numJogos <= 0 || numJogadores <= 0) {
+        alert('Os valores de Capital Inicial, Valor por Jogo devem ser iguais ou maiores que 0, o Número de Jogos e o Número de Jogadores devem ser maiores que 0.');
         return;
     }
 
-    // Limitar o número de jogos para evitar simulações muito longas
+    // Limitar o número de jogos e jogadores para evitar simulações muito longas
     const maxJogos = 10000;
+    const maxJogadores = 100; // Define um máximo razoável
     if (numJogos > maxJogos) {
         alert(`O número máximo de jogos permitido é ${maxJogos}.`);
         return;
     }
+    if (numJogadores > maxJogadores) {
+        alert(`O número máximo de jogadores permitido é ${maxJogadores}.`);
+        return;
+    }
 
-    // Executar simulação
-    const simulacao = runSimulation(capitalInicial, valorJogo, probErro, probAcerto, numJogos);
+    // Executar simulações para cada jogador
+    const simulacoes = [];
+    for (let i = 0; i < numJogadores; i++) {
+        const simulacao = runSimulation(capitalInicial, valorJogo, probErro, probAcerto, numJogos);
+        simulacoes.push(simulacao);
+    }
 
     // Desenhar gráfico
-    desenharGrafico(simulacao, capitalInicial);
+    desenharGrafico(simulacoes, capitalInicial);
 
     // Exibir resultados
-    const capitalFinal = simulacao.resultados[simulacao.resultados.length - 1];
-    exibirResultados(simulacao.acertos, simulacao.erros, capitalFinal);
+    exibirResultados(simulacoes);
 });
 
 // Adicionar eventos para sincronizar as probabilidades

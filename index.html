@@ -58,11 +58,11 @@
                 <!-- Probabilidade -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingProbabilidade">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProbabilidade" aria-expanded="true" aria-controls="collapseProbabilidade">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProbabilidade" aria-expanded="false" aria-controls="collapseProbabilidade">
                             Probabilidade
                         </button>
                     </h2>
-                    <div id="collapseProbabilidade" class="accordion-collapse collapse show" aria-labelledby="headingProbabilidade" data-bs-parent="#conceitosAccordion">
+                    <div id="collapseProbabilidade" class="accordion-collapse collapse" aria-labelledby="headingProbabilidade" data-bs-parent="#conceitosAccordion">
                         <div class="accordion-body">
                             Probabilidade é a medida da chance de ocorrência de um evento. No contexto de riscos, a probabilidade ajuda a quantificar a incerteza associada a diferentes cenários.
                         </div>
@@ -104,11 +104,11 @@
                 <!-- Avaliação de risco qualitativa -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Avaliação de risco qualitativa
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>Esta é uma técnica inicial usada para identificar e priorizar riscos com base em sua probabilidade de ocorrência e no impacto potencial. As avaliações qualitativas são normalmente subjetivas e se baseiam em opiniões de especialistas, sem a necessidade de dados numéricos precisos.</p>
                             <ul class="list-group list-group-flush">
@@ -169,7 +169,7 @@
 
         <!-- Simulação Interativa -->
 <section id="simulacao" class="simulation mb-5">
-    <h2 class="mb-4"><i class="fas fa-chart-line"></i> Simulação Interativa de Monte Carlo</h2>
+    <h2 class="mb-4"><i class="fas fa-chart-line"></i> Simulação de Monte Carlo</h2>
     
     <!-- Explicação sobre Cassinos sem fluxograma -->
     <div class="mb-5">
@@ -195,7 +195,7 @@
     </ul>
     <!-- Envolvendo a imagem com um div text-center -->
     <div class="text-center">
-        <img src="bets.jpg" class="img-fluid rounded mb-3 imgA w-50" alt="Impacto Atual no Brasil">
+        <img src="image/bets.jpg" class="img-fluid rounded mb-3 imgA w-50" alt="Impacto Atual no Brasil">
     </div>
     <!-- Fonte do TecMundo -->
     <p class="text-muted mt-3">Fonte: <a href="https://www.tecmundo.com.br/mercado/290017-bets-receber-r-216-bilhoes-apostadores-somente-2024.htm" target="_blank" rel="noopener noreferrer">TecMundo - Apostas esportivas devem receber R$ 216 bilhões dos brasileiros em 2024</a></p>
@@ -205,46 +205,64 @@
 </div>
 
     <!-- Formulário de Simulação Envolvido em um Card -->
-    <div class="card mb-4">
-        <div class="card-body">
-            <h4 class="card-title mb-4"><i class="fas fa-calculator"></i> Configurações da Simulação</h4>
-            <form id="simulationForm">
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="capitalInicial" class="form-label">Capital Inicial (R$):</label>
-                            <input type="number" class="form-control" id="capitalInicial" name="capitalInicial" value="1000" min="0" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="valorJogo" class="form-label">Valor por Jogo (R$):</label>
-                            <input type="number" class="form-control" id="valorJogo" name="valorJogo" value="10" min="0" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="probErro" class="form-label">Probabilidade de Erro (%):</label>
-                            <input type="number" class="form-control" id="probErro" name="probErro" value="50" min="0" max="100" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="probAcerto" class="form-label">Probabilidade de Acerto (%):</label>
-                            <input type="number" class="form-control" id="probAcerto" name="probAcerto" value="50" min="0" max="100" required readonly>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="numJogos" class="form-label">Número de Jogos:</label>
-                            <input type="number" class="form-control" id="numJogos" name="numJogos" value="100" min="1" required>
-                        </div>
+<div class="card mb-4">
+    <div class="card-body">
+        <h4 class="card-title mb-4"><i class="fas fa-calculator"></i> Configurações da Simulação</h4>
+        <form id="simulationForm">
+            <div class="row g-3">
+                <!-- Capital Inicial -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="capitalInicial" class="form-label">Capital Inicial (R$):</label>
+                        <input type="number" class="form-control" id="capitalInicial" name="capitalInicial" value="1000" min="0" required>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success w-100"><i class="fas fa-play"></i> Simular</button>
-            </form>
-        </div>
+                
+                <!-- Valor por Jogo -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="valorJogo" class="form-label">Valor por Jogo (R$):</label>
+                        <input type="number" class="form-control" id="valorJogo" name="valorJogo" value="10" min="0" required>
+                    </div>
+                </div>
+                
+                <!-- Probabilidade de Erro -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="probErro" class="form-label">Probabilidade de Erro (%):</label>
+                        <input type="number" class="form-control" id="probErro" name="probErro" value="50" min="0" max="100" required>
+                    </div>
+                </div>
+                
+                <!-- Probabilidade de Acerto (Somente Leitura) -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="probAcerto" class="form-label">Probabilidade de Acerto (%):</label>
+                        <input type="number" class="form-control" id="probAcerto" name="probAcerto" value="50" min="0" max="100" required readonly>
+                    </div>
+                </div>
+                
+                <!-- Número de Jogos -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="numJogos" class="form-label">Número de Jogos:</label>
+                        <input type="number" class="form-control" id="numJogos" name="numJogos" value="100" min="1" required>
+                    </div>
+                </div>
+                
+                <!-- Novo Campo: Número de Jogadores -->
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="numJogadores" class="form-label">Número de Jogadores:</label>
+                        <input type="number" class="form-control" id="numJogadores" name="numJogadores" value="1" min="1" required>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success w-100"><i class="fas fa-play"></i> Simular</button>
+        </form>
     </div>
+</div>
+
 
     <!-- Resultados da Simulação -->
     <div class="simulation-results p-4 bg-light rounded mb-4" id="simulationResults" style="display: none;">
@@ -278,7 +296,8 @@
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="crise-2008-19061461.jpg" class="img-fluid rounded mb-3 imgA" alt="Mercados Financeiros">
+                                    <img src="image/crise-2008-19061461.jpg" class="img-fluid rounded mb-3 imgA" alt="Mercados Financeiros">
+                                    <p class="text-muted mt-2">Fonte da imagem: <a href="https://www.infoescola.com/economia/crise-economica-global-de-2008/" target="_blank" rel="noopener noreferrer">InfoEscola - Crise Econômica Global de 2008</a></p>
                                 </div>
                                 <div class="col-md-6">
                                     <p>Em mercados financeiros, incertezas como inflação, recessões ou mudanças em políticas monetárias podem impactar investimentos de forma significativa. Um investidor deve ser capaz de avaliar o risco de seus ativos em relação a eventos futuros imprevisíveis.</p>
@@ -306,7 +325,8 @@
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="hq720.jpg" class="img-fluid rounded mb-3 imgA" alt="Indústria de Tecnologia">
+                                    <img src="image/hq720.jpg" class="img-fluid rounded mb-3 imgA" alt="Indústria de Tecnologia">
+                                    <p class="text-muted mt-2">Fonte da imagem: <a href="https://www.youtube.com/watch?v=4EvNxWhskf8" target="_blank" rel="noopener noreferrer">YouTube - Indústria de Tecnologia</a></p>
                                 </div>
                                 <div class="col-md-6">
                                     <p>O setor de tecnologia é altamente dinâmico e incerto. O desenvolvimento de novas tecnologias pode ser afetado por incertezas quanto à adoção do mercado, mudanças regulatórias ou até surgimento de concorrentes disruptivos. A avaliação de riscos nesse setor envolve a análise de tendências tecnológicas, preferências do consumidor e ciclos de inovação.</p>
@@ -323,7 +343,6 @@
                     </div>
                 </div>
 
-                <!-- Adicione mais exemplos reais conforme necessário -->
             </div>
         </section>
 
@@ -334,17 +353,20 @@
         </section>
 
         <!-- Recursos Adicionais -->
-        <section id="recursos" class="mb-5">
-            <h2 class="mb-4"><i class="fas fa-book"></i> Recursos Adicionais</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="https://www.investopedia.com/terms/r/risk.asp" target="_blank">Investopedia - Risco</a></li>
-                <li class="list-group-item"><a href="https://www.sciencedirect.com/topics/business-management/monte-carlo-simulation" target="_blank">Simulação de Monte Carlo - ScienceDirect</a></li>
-                <li class="list-group-item"><a href="https://www.projectmanagement.com/wikis/391590/A-Monte-Carlo-Simulation-in-Project-Management" target="_blank">Monte Carlo na Gestão de Projetos</a></li>
-                <li class="list-group-item"><a href="https://www.youtube.com/watch?v=hiDxNFVnXbM" target="_blank">Vídeo Explicativo sobre Avaliação de Riscos</a></li>
-                <li class="list-group-item"><a href="https://www.coursera.org/courses?query=monte%20carlo%20simulation" target="_blank">Cursos sobre Simulação de Monte Carlo - Coursera</a></li>
-                <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/Monte_Carlo_method" target="_blank">Wikipedia - Método de Monte Carlo</a></li>
-            </ul>
-        </section>
+<section id="recursos" class="mb-5">
+    <h2 class="mb-4"><i class="fas fa-book"></i> Referências</h2>
+    <ul class="list-group">
+        <li class="list-group-item"><a href="https://www.investopedia.com/terms/r/risk.asp" target="_blank">Investopedia - Risco</a></li>
+        <li class="list-group-item"><a href="https://www.sciencedirect.com/topics/business-management/monte-carlo-simulation" target="_blank">Simulação de Monte Carlo - ScienceDirect</a></li>
+        <li class="list-group-item"><a href="https://www.techtarget.com/searchcio/definition/qualitative-risk-analysis" target="_blank">TechTarget - Avaliação Qualitativa de Riscos</a></li>
+        <li class="list-group-item"><a href="https://www.investopedia.com/terms/q/quantitative-risk-analysis.asp" target="_blank">Investopedia - Avaliação Quantitativa de Riscos</a></li>
+        <li class="list-group-item"><a href="https://www.investopedia.com/terms/s/swot.asp" target="_blank">Investopedia - Análise SWOT</a></li>
+        <li class="list-group-item"><a href="https://www.researchgate.net/publication/269404655_The_global_financial_crisis_of_2008-2009_the_role_of_inefficient_risk_management" target="_blank">ResearchGate - Crise Financeira Global de 2008 e Gestão de Riscos</a></li>
+        <li class="list-group-item"><a href="https://www.forbes.com/sites/forbestechcouncil/2020/06/30/what-went-wrong-with-google-glass/?sh=12b4de9948c3" target="_blank">Forbes - O Fracasso do Google Glass</a></li>
+        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=hiDxNFVnXbM" target="_blank">Vídeo Explicativo sobre Avaliação de Riscos</a></li>
+    </ul>
+</section>
+
     </main>
 
     <!-- Rodapé -->

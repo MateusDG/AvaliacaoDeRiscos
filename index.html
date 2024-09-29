@@ -47,7 +47,7 @@
         <!-- Introdução -->
         <section id="introducao" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-info-circle"></i> Introdução</h2>
-            <p>A <strong>Avaliação de Riscos sob Incertezas</strong> é um tema essencial para a tomada de decisões eficazes em ambientes onde os resultados são incertos. Compreender os riscos e suas possíveis variações permite que indivíduos e organizações planejem melhor suas estratégias, minimizem perdas e maximizem oportunidades.</p>
+            <p>A <strong>Avaliação de Riscos sob Incertezas</strong> é uma disciplina essencial para a tomada de decisões eficazes em ambientes onde os resultados são incertos. Compreender os riscos e suas possíveis variações permite que indivíduos e organizações planejem melhor suas estratégias, minimizem perdas e maximizem oportunidades.</p>
             <p>Este recurso visa fornecer uma visão abrangente sobre como identificar, analisar e gerenciar riscos utilizando diversas metodologias, com foco especial na aplicação de simulações para entender a influência da incerteza nos resultados.</p>
         </section>
 
@@ -98,119 +98,170 @@
         </section>
 
         <!-- Técnicas -->
-<section id="tecnicas" class="mb-5">
-    <h2 class="mb-4"><i class="fas fa-tools"></i> Algumas Técnicas de Avaliação de Riscos</h2>
-    <div class="accordion" id="accordionExample">
-        <!-- Avaliação de risco qualitativa -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Avaliação de risco qualitativa
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Esta é uma técnica inicial usada para identificar e priorizar riscos com base em sua probabilidade de ocorrência e no impacto potencial. As avaliações qualitativas são normalmente subjetivas e se baseiam em opiniões de especialistas, sem a necessidade de dados numéricos precisos.</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Brainstorming</strong></li>
-                        <li class="list-group-item"><strong>Entrevistas e Questionários</strong></li>
-                        <li class="list-group-item"><strong>Matriz de Probabilidade e Impacto</strong></li>
-                    </ul>
-                    <img src="https://advisera.com/wp-content/uploads/sites/5/2017/03/Qualitative_risk_assessments_PT.png" class="img-fluid rounded mb-3 imgA" alt="Matriz de Probabilidade">
-                    <p>Usa uma matriz para classificar riscos de acordo com sua probabilidade de ocorrer (alta, média, baixa) e impacto (alto, médio, baixo). Os riscos mais significativos são priorizados para um exame mais detalhado.</p>
+        <section id="tecnicas" class="mb-5">
+            <h2 class="mb-4"><i class="fas fa-tools"></i> Algumas Técnicas de Avaliação de Riscos</h2>
+            <div class="accordion" id="accordionExample">
+                <!-- Avaliação de risco qualitativa -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Avaliação de risco qualitativa
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Esta é uma técnica inicial usada para identificar e priorizar riscos com base em sua probabilidade de ocorrência e no impacto potencial. As avaliações qualitativas são normalmente subjetivas e se baseiam em opiniões de especialistas, sem a necessidade de dados numéricos precisos.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Brainstorming</strong></li>
+                                <li class="list-group-item"><strong>Entrevistas e Questionários</strong></li>
+                                <li class="list-group-item"><strong>Matriz de Probabilidade e Impacto</strong></li>
+                            </ul>
+                            <img src="https://advisera.com/wp-content/uploads/sites/5/2017/03/Qualitative_risk_assessments_PT.png" class="img-fluid rounded mb-3 imgA" alt="Matriz de Probabilidade">
+                            <p>Usa uma matriz para classificar riscos de acordo com sua probabilidade de ocorrer (alta, média, baixa) e impacto (alto, médio, baixo). Os riscos mais significativos são priorizados para um exame mais detalhado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avaliação de risco quantitativa -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Avaliação de risco quantitativa
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Esta técnica usa métodos matemáticos e estatísticos para medir e analisar os riscos. Ela é mais precisa e objetiva do que a análise qualitativa e fornece uma visão mais detalhada dos riscos.</p>
+                            <p>A avaliação quantitativa dos riscos muitas vezes faz uso destes conceitos:</p>
+                            <p><strong>SLE (Single Loss Expectancy – Expectativa de uma única perda)</strong>: dinheiro que se espera perder caso um incidente ocorra uma vez.</p>
+                            <p><strong>ARO (Annual Rate of Occurrence – Taxa anual de ocorrência)</strong>: quantas vezes dentro de um período de um ano se espera que o incidente ocorra.</p>
+                            <p><strong>ALE (Annual Loss Expectancy – Expectativa de perda anual)</strong>: dinheiro que se espera perder em um ano considerando o SLE e o ARO (ALE = SLE * ARO). Para a avaliação de risco quantitativa, este é o valor do risco.</p>
+                            <p>Exemplo de uso:</p>
+                            <p>Valor da base de dados: USD 2,5 milhões (SLE)<br>
+                               Estatísticas do fabricante informam que uma falha catastrófica da base de dados (devido a software ou hardware) ocorre uma vez a cada 10 anos (ARO = 1/10 = 0.1)<br>
+                               <strong>ALE = 2,5 * 0,1 = USD 250K</strong><br><br></p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Simulação de Monte Carlo</strong></li>
+                                <li class="list-group-item"><strong>Análise de Valor Esperado (EVA - Expected Value Analysis)</strong></li>
+                                <li class="list-group-item"><strong>Árvore de Decisão</strong></li>
+                            </ul>
+                            <img src="https://estatsite.com.br/wp-content/uploads/2016/06/1.png" class="img-fluid rounded mb-3 imgA" alt="Árvore de Decisão">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Análise SWOT -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Análise SWOT
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Embora mais usada para análise estratégica, a análise SWOT (Strengths, Weaknesses, Opportunities, Threats) pode ser adaptada para a avaliação de riscos, ajudando a identificar ameaças e fraquezas no ambiente interno e externo de uma organização ou projeto.</p>
+                            <img src="https://storage.googleapis.com/meetime-blog/wp-content/uploads/2023/08/b38deb9f-colorful-modern-swot-analysis-graph-1.png" class="img-fluid rounded mb-3 imgA" alt="Análise SWOT">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Avaliação de risco quantitativa -->
-<div class="accordion-item">
-    <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Avaliação de risco quantitativa
-        </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-            <p>Esta técnica usa métodos matemáticos e estatísticos para medir e analisar os riscos. Ela é mais precisa e objetiva do que a análise qualitativa e fornece uma visão mais detalhada dos riscos.</p>
-            <p>A avaliação quantitativa dos riscos muitas vezes faz uso destes conceitos:</p>
-            <p><strong>SLE (Single Loss Expectancy – Expectativa de uma única perda)</strong>: dinheiro que se espera perder caso um incidente ocorra uma vez.</p>
-            <p><strong>ARO (Annual Rate of Occurrence – Taxa anual de ocorrência)</strong>: quantas vezes dentro de um período de um ano se espera que o incidente ocorra.</p>
-            <p><strong>ALE (Annual Loss Expectancy – Expectativa de perda anual)</strong>: dinheiro que se espera perder em um ano considerando o SLE e o ARO (ALE = SLE * ARO). Para a avaliação de risco quantitativa, este é o valor do risco.</p>
-            <p>Exemplo de uso:</p>
-            <p>Valor da base de dados: USD 2,5 milhões (SLE)<br>
-               Estatísticas do fabricante informam que uma falha catastrófica da base de dados (devido a software ou hardware) ocorre uma vez a cada 10 anos (ARO = 1/10 = 0.1)<br>
-               <strong>ALE = 2,5 * 0,1 = USD 250K</strong><br><br></p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Simulação de Monte Carlo</strong></li>
-                <li class="list-group-item"><strong>Análise de Valor Esperado (EVA - Expected Value Analysis)</strong></li>
-                <li class="list-group-item"><strong>Árvore de Decisão</strong></li>
-            </ul>
-            <img src="https://estatsite.com.br/wp-content/uploads/2016/06/1.png" class="img-fluid rounded mb-3 imgA imgA-quanti" alt="Árvore de Decisão">
-        </div>
+        <!-- Simulação Interativa -->
+<section id="simulacao" class="simulation mb-5">
+    <h2 class="mb-4"><i class="fas fa-chart-line"></i> Simulação Interativa de Monte Carlo</h2>
+    
+    <!-- Explicação sobre Cassinos sem fluxograma -->
+    <div class="mb-5">
+        <h3 class="mb-3"><i class="fas fa-info-circle"></i> Como a Simulação de Monte Carlo Influencia os Cassinos</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Leis dos Grandes Números:</strong> À medida que o número de apostas aumenta, os resultados tendem a se aproximar das probabilidades teóricas.</li>
+            <li class="list-group-item"><strong>Vantagem da Casa:</strong> Pequena margem estatística que garante lucros consistentes para os cassinos a longo prazo.</li>
+            <li class="list-group-item"><strong>Modelagem de Riscos:</strong> Os cassinos utilizam a simulação para prever resultados e gerenciar riscos financeiros.</li>
+            <li class="list-group-item"><strong>Estratégias de Mitigação:</strong> Diversificação de jogos, ajustes nas probabilidades e gerenciamento de fluxo de caixa baseado em simulações.</li>
+            <li class="list-group-item"><strong>Impacto nas Pessoas:</strong> Apesar das vitórias ocasionais, a longo prazo, a maioria dos jogadores perde dinheiro devido à vantagem estatística dos cassinos.</li>
+        </ul>
     </div>
+
+<!-- Impacto Atual no Brasil com nova imagem -->
+<div class="mb-5">
+    <h3 class="mb-3"><i class="fas fa-exclamation-triangle"></i> Impacto Atual no Brasil</h3>
+    <ul class="list-group list-group-flush mb-4"> <!-- Adicionando espaçamento com mb-4 -->
+        <li class="list-group-item"><strong>Crescimento das Apostas Online:</strong> A popularização das plataformas de jogos de azar digitais tem aumentado significativamente o número de apostadores no Brasil.</li>
+        <li class="list-group-item"><strong>Perdas Financeiras:</strong> Estima-se que milhares de brasileiros estejam perdendo dinheiro regularmente em cassinos online.</li>
+        <li class="list-group-item"><strong>Falta de Regulamentação:</strong> A ausência de legislação específica dificulta a fiscalização e proteção dos consumidores.</li>
+        <li class="list-group-item"><strong>Consequências Sociais:</strong> Aumento de casos de vício em jogos, endividamento e problemas familiares relacionados às perdas financeiras.</li>
+        <li class="list-group-item"><strong>Necessidade de Conscientização:</strong> É essencial promover a educação financeira e conscientizar sobre os riscos dos jogos de azar.</li>
+    </ul>
+    <!-- Envolvendo a imagem com um div text-center -->
+    <div class="text-center">
+        <img src="bets.jpg" class="img-fluid rounded mb-3 imgA w-50" alt="Impacto Atual no Brasil">
+    </div>
+    <!-- Fonte do TecMundo -->
+    <p class="text-muted mt-3">Fonte: <a href="https://www.tecmundo.com.br/mercado/290017-bets-receber-r-216-bilhoes-apostadores-somente-2024.htm" target="_blank" rel="noopener noreferrer">TecMundo - Apostas esportivas devem receber R$ 216 bilhões dos brasileiros em 2024</a></p>
 </div>
 
-        <!-- Análise SWOT -->
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Análise SWOT
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Embora mais usada para análise estratégica, a análise SWOT (Strengths, Weaknesses, Opportunities, Threats) pode ser adaptada para a avaliação de riscos, ajudando a identificar ameaças e fraquezas no ambiente interno e externo de uma organização ou projeto.</p>
-                    <img src="https://storage.googleapis.com/meetime-blog/wp-content/uploads/2023/08/b38deb9f-colorful-modern-swot-analysis-graph-1.png" class="img-fluid rounded mb-3 imgA" alt="Análise SWOT">
+
+</div>
+
+    <!-- Formulário de Simulação Envolvido em um Card -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title mb-4"><i class="fas fa-calculator"></i> Configurações da Simulação</h4>
+            <form id="simulationForm">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="capitalInicial" class="form-label">Capital Inicial (R$):</label>
+                            <input type="number" class="form-control" id="capitalInicial" name="capitalInicial" value="1000" min="0" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="valorJogo" class="form-label">Valor por Jogo (R$):</label>
+                            <input type="number" class="form-control" id="valorJogo" name="valorJogo" value="10" min="0" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="probErro" class="form-label">Probabilidade de Erro (%):</label>
+                            <input type="number" class="form-control" id="probErro" name="probErro" value="50" min="0" max="100" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="probAcerto" class="form-label">Probabilidade de Acerto (%):</label>
+                            <input type="number" class="form-control" id="probAcerto" name="probAcerto" value="50" min="0" max="100" required readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="numJogos" class="form-label">Número de Jogos:</label>
+                            <input type="number" class="form-control" id="numJogos" name="numJogos" value="100" min="1" required>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <button type="submit" class="btn btn-success w-100"><i class="fas fa-play"></i> Simular</button>
+            </form>
         </div>
+    </div>
+
+    <!-- Resultados da Simulação -->
+    <div class="simulation-results p-4 bg-light rounded mb-4" id="simulationResults" style="display: none;">
+        <h3>Resultados da Simulação</h3>
+        <p><strong>Total de Jogos:</strong> <span id="totalJogos">0</span></p>
+        <p><strong>Acertos:</strong> <span id="totalAcertos">0</span></p>
+        <p><strong>Erros:</strong> <span id="totalErros">0</span></p>
+        <p><strong>Capital Final:</strong> R$ <span id="capitalFinal">0.00</span></p>
+    </div>
+
+    <!-- Gráfico da Simulação -->
+    <div class="mt-4 chart-container">
+        <canvas id="resultadoChart"></canvas>
+        <p class="canvas-description"><strong>Figura 5:</strong> Evolução do capital ao longo dos jogos, comparando com o capital inicial.</p>
     </div>
 </section>
 
-        <!-- Simulação Interativa -->
-        <section id="simulacao" class="simulation mb-5">
-            <h2 class="mb-4"><i class="fas fa-chart-line"></i> Simulação Interativa de Monte Carlo</h2>
-            <form id="simulationForm" class="mb-4">
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <label for="capitalInicial" class="form-label">Capital Inicial (R$):</label>
-                        <input type="number" class="form-control" id="capitalInicial" name="capitalInicial" value="1000" min="0" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="valorJogo" class="form-label">Valor por Jogo (R$):</label>
-                        <input type="number" class="form-control" id="valorJogo" name="valorJogo" value="10" min="0" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="probErro" class="form-label">Probabilidade de Erro (%):</label>
-                        <input type="number" class="form-control" id="probErro" name="probErro" value="50" min="0" max="100" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="probAcerto" class="form-label">Probabilidade de Acerto (%):</label>
-                        <input type="number" class="form-control" id="probAcerto" name="probAcerto" value="50" min="0" max="100" required readonly>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="numJogos" class="form-label">Número de Jogos:</label>
-                        <input type="number" class="form-control" id="numJogos" name="numJogos" value="100" min="1" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-success mt-3"><i class="fas fa-play"></i> Simular</button>
-            </form>
-
-            <!-- Resultados da Simulação -->
-            <div class="simulation-results p-4 bg-light rounded" id="simulationResults" style="display: none;">
-                <h3>Resultados da Simulação</h3>
-                <p><strong>Total de Jogos:</strong> <span id="totalJogos">0</span></p>
-                <p><strong>Acertos:</strong> <span id="totalAcertos">0</span></p>
-                <p><strong>Erros:</strong> <span id="totalErros">0</span></p>
-                <p><strong>Capital Final:</strong> R$ <span id="capitalFinal">0.00</span></p>
-            </div>
-
-            <!-- Gráfico da Simulação -->
-            <div class="mt-4 chart-container">
-                <canvas id="resultadoChart"></canvas>
-                <p class="canvas-description"><strong>Figura 5:</strong> Evolução do capital ao longo dos jogos, comparando com o capital inicial.</p>
-            </div>
-        </section>
 
         <!-- Exemplos Reais -->
         <section id="exemplos" class="mb-5">
@@ -227,7 +278,7 @@
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stock_Market.jpg/800px-Stock_Market.jpg" class="img-fluid rounded mb-3 imgA" alt="Mercados Financeiros">
+                                    <img src="crise-2008-19061461.jpg" class="img-fluid rounded mb-3 imgA" alt="Mercados Financeiros">
                                 </div>
                                 <div class="col-md-6">
                                     <p>Em mercados financeiros, incertezas como inflação, recessões ou mudanças em políticas monetárias podem impactar investimentos de forma significativa. Um investidor deve ser capaz de avaliar o risco de seus ativos em relação a eventos futuros imprevisíveis.</p>
@@ -244,46 +295,18 @@
                     </div>
                 </div>
 
-                <!-- Exemplo 2: Gestão de Projetos -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingExemplo2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
-                            Exemplo 2: Gestão de Projetos
-                        </button>
-                    </h2>
-                    <div id="collapseExemplo2" class="accordion-collapse collapse" aria-labelledby="headingExemplo2" data-bs-parent="#exemplosAccordion">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Project_management_process.jpg/800px-Project_management_process.jpg" class="img-fluid rounded mb-3 imgA" alt="Gestão de Projetos">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>Na gestão de grandes projetos, como construção de infraestrutura, a incerteza pode vir de diversas fontes: mudanças nas condições climáticas, atrasos de cronograma, aumento nos custos de materiais, entre outros. A avaliação de riscos permite que as equipes de gerenciamento identifiquem essas incertezas e planejem medidas de mitigação.</p>
-                                    <p>A <strong>análise de valor esperado</strong> (Expected Monetary Value - EMV) é uma técnica comum usada para calcular o impacto potencial dos riscos ao projeto. Além disso, uma <strong>matriz de riscos</strong> pode ser usada para classificar os riscos de acordo com a probabilidade e o impacto, ajudando a priorizar as ações preventivas.</p>
-                                    <ul>
-                                        <li><strong>Identificação de Riscos:</strong> Condições climáticas adversas, falhas técnicas, aumento de custos de fornecedores.</li>
-                                        <li><strong>Análise:</strong> Análise qualitativa para priorizar os riscos e quantitativa para calcular o impacto financeiro.</li>
-                                        <li><strong>Mitigação:</strong> Alocação de contingências no orçamento, planejamento de cronogramas flexíveis e contratos com cláusulas de ajuste de preço.</li>
-                                        <li><strong>Exemplo Real:</strong> Em projetos de grandes barragens, como a Hidrelétrica de Belo Monte no Brasil, as incertezas sobre o impacto ambiental e atrasos no licenciamento causaram mudanças significativas no cronograma e aumento de custos.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Exemplo 3: Indústria de Tecnologia -->
+                <!-- Exemplo 2: Indústria de Tecnologia -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingExemplo3">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" aria-expanded="false" aria-controls="collapseExemplo3">
-                            Exemplo 3: Indústria de Tecnologia
+                            Exemplo 2: Indústria de Tecnologia
                         </button>
                     </h2>
                     <div id="collapseExemplo3" class="accordion-collapse collapse" aria-labelledby="headingExemplo3" data-bs-parent="#exemplosAccordion">
                         <div class="accordion-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Technology_Evolution.png/800px-Technology_Evolution.png" class="img-fluid rounded mb-3 imgA" alt="Indústria de Tecnologia">
+                                    <img src="hq720.jpg" class="img-fluid rounded mb-3 imgA" alt="Indústria de Tecnologia">
                                 </div>
                                 <div class="col-md-6">
                                     <p>O setor de tecnologia é altamente dinâmico e incerto. O desenvolvimento de novas tecnologias pode ser afetado por incertezas quanto à adoção do mercado, mudanças regulatórias ou até surgimento de concorrentes disruptivos. A avaliação de riscos nesse setor envolve a análise de tendências tecnológicas, preferências do consumidor e ciclos de inovação.</p>
@@ -300,15 +323,14 @@
                     </div>
                 </div>
 
+                <!-- Adicione mais exemplos reais conforme necessário -->
             </div>
         </section>
-
 
         <!-- Conclusão -->
         <section id="conclusao" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-clipboard-check"></i> Conclusão</h2>
             <p>A avaliação de riscos sob incertezas é fundamental para a gestão eficaz de projetos e operações em qualquer organização. Compreender e aplicar técnicas apropriadas permite identificar potenciais ameaças e oportunidades, facilitando a tomada de decisões informadas e a implementação de estratégias de mitigação.</p>
-            <p>A utilização de ferramentas interativas, como a Simulação de Monte Carlo, enriquece o processo de avaliação, proporcionando uma visão mais clara das possíveis variações e ajudando a antecipar desafios futuros. A educação contínua e a prática dessas metodologias são essenciais para aprimorar a capacidade de gerenciar riscos em ambientes complexos e dinâmicos.</p>
         </section>
 
         <!-- Recursos Adicionais -->

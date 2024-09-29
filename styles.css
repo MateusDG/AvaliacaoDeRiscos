@@ -31,6 +31,10 @@ h2::after {
     bottom: 0;
 }
 
+h3 {
+    color: #1abc9c;
+}
+
 /* Estilo da seção de resultados da simulação */
 .simulation-results {
     border: 1px solid #dee2e6;
@@ -65,15 +69,20 @@ h2::after {
 /* Estilo personalizado para imagens específicas dentro de accordion-body */
 .accordion-body img.imgA {
     display: block;
-    width: 40%; /* Largura padrão para todas as imgA */
+    width: 40%; /* Ajuste conforme necessário */
     height: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Estilo adicional para a imagem específica 'imgA-quanti' */
-.accordion-body img.imgA-quanti {
-    width: 50%; /* Aumenta a largura para 50% */
+/* Estilo adicional para a imagem na seção simulação */
+.simulation img.imgA {
+    width: 50%; /* Ajuste para diminuir o tamanho */
+    margin: 0 auto 1rem auto; /* Centraliza e adiciona margem inferior */
+}
+
+.text-center img.w-50 {
+    width: 50% !important; /* Garante que a largura seja 50% */
 }
 
 /* Responsividade geral */
@@ -113,65 +122,98 @@ h2::after {
 
     /* Ajuste de largura para imagens em telas menores */
     .accordion-body img.imgA {
-        width: 60%; /* Largura padrão para imgA em telas menores */
+        width: 60%; /* Ajuste conforme necessário */
     }
 
-    /* Ajuste de largura para a imagem específica 'imgA-quanti' em telas menores */
-    .accordion-body img.imgA-quanti {
-        width: 70%; /* Aumenta ainda mais para 70% em telas pequenas */
+    /* Estilo para títulos secundários na simulação */
+    #simulacao h3 {
+        color: #1abc9c;
+        margin-bottom: 15px;
+    }
+
+    /* Estilo para listas na simulação */
+    #simulacao ul.list-group-flush li {
+        padding-left: 1.25rem;
+        position: relative;
+    }
+
+    #simulacao ul.list-group-flush li::before {
+        content: "\2022";
+        color: #1abc9c;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    /* Estilo dos botões */
+    .btn-primary {
+        background-color: #1abc9c;
+        border-color: #1abc9c;
+    }
+
+    .btn-primary:hover {
+        background-color: #16a085;
+        border-color: #148f77;
+    }
+
+    .btn-secondary {
+        background-color: #95a5a6;
+        border-color: #95a5a6;
+    }
+
+    .btn-secondary:hover {
+        background-color: #7f8c8d;
+        border-color: #7f8c8d;
+    }
+
+    .btn-success {
+        background-color: #2ecc71;
+        border-color: #2ecc71;
+    }
+
+    .btn-success:hover {
+        background-color: #27ae60;
+        border-color: #1e8449;
+    }
+
+    /* Estilo dos links na lista de recursos */
+    #recursos ul li a {
+        color: #1abc9c;
+        text-decoration: none;
+    }
+
+    #recursos ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Estilo para a nova explicação na simulação */
+    #simulacao .mb-5 h3 {
+        margin-bottom: 1rem;
+    }
+
+    /* Personalização adicional para o formulário dentro do card */
+    .card-body {
+        padding: 2rem;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .btn-success {
+        font-size: 1.1rem;
     }
 }
 
-/* Estilo dos cards */
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-title {
-    color: #1abc9c;
-}
-
-.accordion-button {
-    font-weight: bold;
-}
-
-/* Estilo dos botões */
-.btn-primary {
-    background-color: #1abc9c;
-    border-color: #1abc9c;
-}
-
-.btn-primary:hover {
-    background-color: #16a085;
-    border-color: #148f77;
-}
-
-.btn-secondary {
-    background-color: #95a5a6;
-    border-color: #95a5a6;
-}
-
-.btn-secondary:hover {
-    background-color: #7f8c8d;
-    border-color: #7f8c8d;
-}
-
-.btn-success {
-    background-color: #2ecc71;
-    border-color: #2ecc71;
-}
-
-.btn-success:hover {
-    background-color: #27ae60;
-    border-color: #1e8449;
-}
-
-#recursos ul li a {
-    color: #1abc9c;
-    text-decoration: none;
-}
-
-#recursos ul li a:hover {
-    text-decoration: underline;
+/* Aumenta o tamanho da imagem específica dentro do acordeão */
+.accordion-body img.imgA {
+    width: 100%; /* Faz a imagem ocupar toda a largura da coluna */
+    max-width: 800px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
 }

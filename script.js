@@ -57,21 +57,21 @@ function desenharGrafico(dados, capitalInicial) {
                 {
                     label: 'Capital ao Longo dos Jogos (R$)',
                     data: dados.resultados,
-                    borderColor: 'rgba(26, 188, 156, 1)',
-                    backgroundColor: 'rgba(26, 188, 156, 0.2)',
+                    borderColor: 'rgba(26, 188, 156, 1)', // Cor da linha principal
+                    backgroundColor: 'rgba(26, 188, 156, 0)', // Removendo o preenchimento
                     borderWidth: 2,
                     pointRadius: 0,
-                    fill: true,
+                    fill: false, // Desativando o preenchimento
                     tension: 0.3
                 },
                 {
                     label: 'Capital Inicial (R$)',
                     data: linhaCapitalInicial,
-                    borderColor: 'rgba(52, 73, 94, 1)',
+                    borderColor: 'rgba(52, 73, 94, 1)', // Cor da linha de referência
                     borderDash: [10,5],
                     borderWidth: 2,
                     pointRadius: 0,
-                    fill: false,
+                    fill: false, // Garantindo que não haja preenchimento
                     tension: 0
                 }
             ]
@@ -112,6 +112,7 @@ function desenharGrafico(dados, capitalInicial) {
         }
     });
 }
+
 
 // Função para exibir resultados de acertos e erros na página
 function exibirResultados(acertos, erros, capitalFinal) {
@@ -190,9 +191,9 @@ document.getElementById('probErro').addEventListener('input', sincronizarProbabi
 
 // Inicializar os campos de probabilidade e gráficos das técnicas e estudos de caso
 window.onload = function() {
-    // Inicialmente, probErro = 0 e probAcerto = 100
-    document.getElementById('probErro').value = "0";
-    document.getElementById('probAcerto').value = "100";
+    // Inicialmente, probErro = 50 e probAcerto = 50
+    document.getElementById('probErro').value = "50";
+    document.getElementById('probAcerto').value = "50";
 
     // Inicializar os gráficos das técnicas (funcionalidade futura)
     inicializarTecnicas();

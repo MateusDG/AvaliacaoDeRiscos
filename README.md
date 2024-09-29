@@ -30,7 +30,6 @@ Essas técnicas são apresentadas de maneira clara, com exemplos práticos e gr�
 ### c) Estudos de Caso
 Para contextualizar o uso das técnicas de avaliação de riscos, o projeto inclui exemplos de **Estudos de Caso**:
 - **Mercados Financeiros**: Analisando riscos relacionados à inflação, recessão e volatilidade.
-- **Gestão de Projetos**: Enfrentando atrasos e aumento de custos em grandes obras.
 - **Indústria de Tecnologia**: Lidar com o risco da rápida evolução tecnológica e aceitação do mercado.
 
 Cada exemplo explora como a avaliação de riscos pode ajudar a mitigar incertezas e melhorar a tomada de decisões.

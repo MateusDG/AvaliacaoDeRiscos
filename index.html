@@ -47,7 +47,7 @@
         <!-- Introdução -->
         <section id="introducao" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-info-circle"></i> Introdução</h2>
-            <p>A <strong>Avaliação de Riscos sob Incertezas</strong> é uma disciplina essencial para a tomada de decisões eficazes em ambientes onde os resultados são incertos. Compreender os riscos e suas possíveis variações permite que indivíduos e organizações planejem melhor suas estratégias, minimizem perdas e maximizem oportunidades.</p>
+            <p>A <strong>Avaliação de Riscos sob Incertezas</strong> é um tema essencial para a tomada de decisões eficazes em ambientes onde os resultados são incertos. Compreender os riscos e suas possíveis variações permite que indivíduos e organizações planejem melhor suas estratégias, minimizem perdas e maximizem oportunidades.</p>
             <p>Este recurso visa fornecer uma visão abrangente sobre como identificar, analisar e gerenciar riscos utilizando diversas metodologias, com foco especial na aplicação de simulações para entender a influência da incerteza nos resultados.</p>
         </section>
 
@@ -98,69 +98,74 @@
         </section>
 
         <!-- Técnicas -->
-        <section id="tecnicas" class="mb-5">
-            <h2 class="mb-4"><i class="fas fa-tools"></i> Algumas Técnicas de Avaliação de Riscos</h2>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+<section id="tecnicas" class="mb-5">
+    <h2 class="mb-4"><i class="fas fa-tools"></i> Algumas Técnicas de Avaliação de Riscos</h2>
+    <div class="accordion" id="accordionExample">
+        <!-- Avaliação de risco qualitativa -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Avaliação de risco qualitativa
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>Esta é uma técnica inicial usada para identificar e priorizar riscos com base em sua probabilidade de ocorrência e no impacto potencial. As avaliações qualitativas são normalmente subjetivas e se baseiam em opiniões de especialistas, sem a necessidade de dados numéricos precisos.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Brainstorming</strong></li>
-                            <li class="list-group-item"><strong>Entrevistas e Questionários</strong></li>
-                            <li class="list-group-item"><strong>Matriz de Probabilidade e Impacto</strong></li>
-                          </ul>
-                        <img src="https://advisera.com/wp-content/uploads/sites/5/2017/03/Qualitative_risk_assessments_PT.png" class="img-fluid rounded mb-3 imgA" alt="Matriz de Prob">
-                        <p>Usa uma matriz para classificar riscos de acordo com sua probabilidade de ocorrer (alta, média, baixa) e impacto (alto, médio, baixo). Os riscos mais significativos são priorizados para um exame mais detalhado.</p>
-                    </div>
-                  </div>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Esta é uma técnica inicial usada para identificar e priorizar riscos com base em sua probabilidade de ocorrência e no impacto potencial. As avaliações qualitativas são normalmente subjetivas e se baseiam em opiniões de especialistas, sem a necessidade de dados numéricos precisos.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Brainstorming</strong></li>
+                        <li class="list-group-item"><strong>Entrevistas e Questionários</strong></li>
+                        <li class="list-group-item"><strong>Matriz de Probabilidade e Impacto</strong></li>
+                    </ul>
+                    <img src="https://advisera.com/wp-content/uploads/sites/5/2017/03/Qualitative_risk_assessments_PT.png" class="img-fluid rounded mb-3 imgA" alt="Matriz de Probabilidade">
+                    <p>Usa uma matriz para classificar riscos de acordo com sua probabilidade de ocorrer (alta, média, baixa) e impacto (alto, médio, baixo). Os riscos mais significativos são priorizados para um exame mais detalhado.</p>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Avaliação de risco quantitativa
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <p>Esta técnica usa métodos matemáticos e estatísticos para medir e analisar os riscos. Ela é mais precisa e objetiva do que a análise qualitativa e fornece uma visão mais detalhada dos riscos.</p>
-                      <p>A avaliação quantitativa dos riscos muitas vezes faz uso destes conceitos:</p>
-                      <p><strong>SLE (Single Loss Expectancy – Expectativa de uma única perda)</strong>: dinheiro que se espera perder caso um incidente ocorra uma vez.</p>
-                      <p><strong>ARO (Annual Rate of Occurrence – Taxa anual de ocorrência)</strong>: quantas vezes dentro de um período de um ano se espera que o incidente ocorra.</p>
-                      <p><strong>ALE (Annual Loss Expectancy – Expectativa de perda anual)</strong>: dinheiro que se espera perder em um ano considerando o SLE e o ARO (ALE = SLE * ARO). Para a avaliação de risco quantitativa, este é o valor do risco.</p>
-                      <p>Exemplo de uso:</p>
-                      <p>Valor da base de dados: USD 2,5 milhões (SLE)<br>
-                        Estatísticas do fabricante informam que uma falha catastrófica da base de dados (devido a software ou hardware) ocorre uma vez a cada 10 anos (ARO = 1/10 = 0.1)<br>
-                        <strong>ALE = 2,5 * 0,1 = USD 250K</strong><br><br></p>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Simulação de Monte Carlo</strong></li>
-                        <li class="list-group-item"><strong>Análise de Valor Esperado (EVA - Expected Value Analysis)</strong></li>
-                        <li class="list-group-item"><strong>Árvore de Decisão</strong></li>
-                      </ul>
-                      <img src="https://estatsite.com.br/wp-content/uploads/2016/06/1.png" class="img-fluid rounded mb-3" alt="Arvore de Decisão">
-                    </div>
-                  </div>
+            </div>
+        </div>
+
+        <!-- Avaliação de risco quantitativa -->
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Avaliação de risco quantitativa
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <p>Esta técnica usa métodos matemáticos e estatísticos para medir e analisar os riscos. Ela é mais precisa e objetiva do que a análise qualitativa e fornece uma visão mais detalhada dos riscos.</p>
+            <p>A avaliação quantitativa dos riscos muitas vezes faz uso destes conceitos:</p>
+            <p><strong>SLE (Single Loss Expectancy – Expectativa de uma única perda)</strong>: dinheiro que se espera perder caso um incidente ocorra uma vez.</p>
+            <p><strong>ARO (Annual Rate of Occurrence – Taxa anual de ocorrência)</strong>: quantas vezes dentro de um período de um ano se espera que o incidente ocorra.</p>
+            <p><strong>ALE (Annual Loss Expectancy – Expectativa de perda anual)</strong>: dinheiro que se espera perder em um ano considerando o SLE e o ARO (ALE = SLE * ARO). Para a avaliação de risco quantitativa, este é o valor do risco.</p>
+            <p>Exemplo de uso:</p>
+            <p>Valor da base de dados: USD 2,5 milhões (SLE)<br>
+               Estatísticas do fabricante informam que uma falha catastrófica da base de dados (devido a software ou hardware) ocorre uma vez a cada 10 anos (ARO = 1/10 = 0.1)<br>
+               <strong>ALE = 2,5 * 0,1 = USD 250K</strong><br><br></p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Simulação de Monte Carlo</strong></li>
+                <li class="list-group-item"><strong>Análise de Valor Esperado (EVA - Expected Value Analysis)</strong></li>
+                <li class="list-group-item"><strong>Árvore de Decisão</strong></li>
+            </ul>
+            <img src="https://estatsite.com.br/wp-content/uploads/2016/06/1.png" class="img-fluid rounded mb-3 imgA imgA-quanti" alt="Árvore de Decisão">
+        </div>
+    </div>
+</div>
+
+        <!-- Análise SWOT -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Análise SWOT
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Embora mais usada para análise estratégica, a análise SWOT (Strengths, Weaknesses, Opportunities, Threats) pode ser adaptada para a avaliação de riscos, ajudando a identificar ameaças e fraquezas no ambiente interno e externo de uma organização ou projeto.</p>
+                    <img src="https://storage.googleapis.com/meetime-blog/wp-content/uploads/2023/08/b38deb9f-colorful-modern-swot-analysis-graph-1.png" class="img-fluid rounded mb-3 imgA" alt="Análise SWOT">
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Análise SWOT
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <p>Embora mais usada para análise estratégica, a análise SWOT (Strengths, Weaknesses, Opportunities, Threats) pode ser adaptada para a avaliação de riscos, ajudando a identificar ameaças e fraquezas no ambiente interno e externo de uma organização ou projeto.</p>
-                        <img src="https://storage.googleapis.com/meetime-blog/wp-content/uploads/2023/08/b38deb9f-colorful-modern-swot-analysis-graph-1.png" class="img-fluid rounded mb-3 imgA" alt="Análise SWOT">
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </section>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Simulação Interativa -->
         <section id="simulacao" class="simulation mb-5">
@@ -208,96 +213,95 @@
         </section>
 
         <!-- Exemplos Reais -->
-<section id="exemplos" class="mb-5">
-    <h2 class="mb-4"><i class="fas fa-industry"></i> Casos de usos</h2>
-    <div class="accordion" id="exemplosAccordion">
-        <!-- Exemplo 1: Mercados Financeiros -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingExemplo1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
-                    Exemplo 1: Mercados Financeiros
-                </button>
-            </h2>
-            <div id="collapseExemplo1" class="accordion-collapse collapse" aria-labelledby="headingExemplo1" data-bs-parent="#exemplosAccordion">
-                <div class="accordion-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stock_Market.jpg/800px-Stock_Market.jpg" class="img-fluid rounded mb-3" alt="Mercados Financeiros">
-                        </div>
-                        <div class="col-md-6">
-                            <p>Em mercados financeiros, incertezas como inflação, recessões ou mudanças em políticas monetárias podem impactar investimentos de forma significativa. Um investidor deve ser capaz de avaliar o risco de seus ativos em relação a eventos futuros imprevisíveis.</p>
-                            <p>Uma técnica comum para avaliar esses riscos é a <strong>simulação de Monte Carlo</strong>, que permite a modelagem de possíveis variações nos retornos financeiros. Além disso, <strong>análises de cenários</strong> e <strong>Value at Risk (VaR)</strong> são amplamente utilizados para estimar perdas potenciais em períodos específicos de incerteza.</p>
-                            <ul>
-                                <li><strong>Identificação de Riscos:</strong> Volatilidade no mercado de ações, mudanças em taxas de juros, crises financeiras.</li>
-                                <li><strong>Análise:</strong> Aplicação de modelos estatísticos e financeiros para prever cenários de variação de preço e retorno.</li>
-                                <li><strong>Mitigação:</strong> Diversificação de investimentos em diferentes setores e regiões geográficas, uso de derivativos para hedge financeiro.</li>
-                                <li><strong>Exemplo Real:</strong> Durante a crise financeira de 2008, muitos fundos de investimento foram afetados pela volatilidade extrema. Investidores que usaram a simulação de Monte Carlo foram capazes de prever os piores cenários e ajustar suas carteiras de acordo.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Exemplo 2: Gestão de Projetos -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingExemplo2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
-                    Exemplo 2: Gestão de Projetos
-                </button>
-            </h2>
-            <div id="collapseExemplo2" class="accordion-collapse collapse" aria-labelledby="headingExemplo2" data-bs-parent="#exemplosAccordion">
-                <div class="accordion-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Project_management_process.jpg/800px-Project_management_process.jpg" class="img-fluid rounded mb-3" alt="Gestão de Projetos">
-                        </div>
-                        <div class="col-md-6">
-                            <p>Na gestão de grandes projetos, como construção de infraestrutura, a incerteza pode vir de diversas fontes: mudanças nas condições climáticas, atrasos de cronograma, aumento nos custos de materiais, entre outros. A avaliação de riscos permite que as equipes de gerenciamento identifiquem essas incertezas e planejem medidas de mitigação.</p>
-                            <p>A <strong>análise de valor esperado</strong> (Expected Monetary Value - EMV) é uma técnica comum usada para calcular o impacto potencial dos riscos ao projeto. Além disso, uma <strong>matriz de riscos</strong> pode ser usada para classificar os riscos de acordo com a probabilidade e o impacto, ajudando a priorizar as ações preventivas.</p>
-                            <ul>
-                                <li><strong>Identificação de Riscos:</strong> Condições climáticas adversas, falhas técnicas, aumento de custos de fornecedores.</li>
-                                <li><strong>Análise:</strong> Análise qualitativa para priorizar os riscos e quantitativa para calcular o impacto financeiro.</li>
-                                <li><strong>Mitigação:</strong> Alocação de contingências no orçamento, planejamento de cronogramas flexíveis e contratos com cláusulas de ajuste de preço.</li>
-                                <li><strong>Exemplo Real:</strong> Em projetos de grandes barragens, como a Hidrelétrica de Belo Monte no Brasil, as incertezas sobre o impacto ambiental e atrasos no licenciamento causaram mudanças significativas no cronograma e aumento de custos.</li>
-                            </ul>
+        <section id="exemplos" class="mb-5">
+            <h2 class="mb-4"><i class="fas fa-industry"></i> Casos de Usos</h2>
+            <div class="accordion" id="exemplosAccordion">
+                <!-- Exemplo 1: Mercados Financeiros -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingExemplo1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo1" aria-expanded="false" aria-controls="collapseExemplo1">
+                            Exemplo 1: Mercados Financeiros
+                        </button>
+                    </h2>
+                    <div id="collapseExemplo1" class="accordion-collapse collapse" aria-labelledby="headingExemplo1" data-bs-parent="#exemplosAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stock_Market.jpg/800px-Stock_Market.jpg" class="img-fluid rounded mb-3 imgA" alt="Mercados Financeiros">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Em mercados financeiros, incertezas como inflação, recessões ou mudanças em políticas monetárias podem impactar investimentos de forma significativa. Um investidor deve ser capaz de avaliar o risco de seus ativos em relação a eventos futuros imprevisíveis.</p>
+                                    <p>Uma técnica comum para avaliar esses riscos é a <strong>simulação de Monte Carlo</strong>, que permite a modelagem de possíveis variações nos retornos financeiros. Além disso, <strong>análises de cenários</strong> e <strong>Value at Risk (VaR)</strong> são amplamente utilizados para estimar perdas potenciais em períodos específicos de incerteza.</p>
+                                    <ul>
+                                        <li><strong>Identificação de Riscos:</strong> Volatilidade no mercado de ações, mudanças em taxas de juros, crises financeiras.</li>
+                                        <li><strong>Análise:</strong> Aplicação de modelos estatísticos e financeiros para prever cenários de variação de preço e retorno.</li>
+                                        <li><strong>Mitigação:</strong> Diversificação de investimentos em diferentes setores e regiões geográficas, uso de derivativos para hedge financeiro.</li>
+                                        <li><strong>Exemplo Real:</strong> Durante a crise financeira de 2008, muitos fundos de investimento foram afetados pela volatilidade extrema. Investidores que usaram a simulação de Monte Carlo foram capazes de prever os piores cenários e ajustar suas carteiras de acordo.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Exemplo 3: Indústria de Tecnologia -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingExemplo3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" aria-expanded="false" aria-controls="collapseExemplo3">
-                    Exemplo 3: Indústria de Tecnologia
-                </button>
-            </h2>
-            <div id="collapseExemplo3" class="accordion-collapse collapse" aria-labelledby="headingExemplo3" data-bs-parent="#exemplosAccordion">
-                <div class="accordion-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Technology_Evolution.png/800px-Technology_Evolution.png" class="img-fluid rounded mb-3" alt="Indústria de Tecnologia">
-                        </div>
-                        <div class="col-md-6">
-                            <p>O setor de tecnologia é altamente dinâmico e incerto. O desenvolvimento de novas tecnologias pode ser afetado por incertezas quanto à adoção do mercado, mudanças regulatórias ou até surgimento de concorrentes disruptivos. A avaliação de riscos nesse setor envolve a análise de tendências tecnológicas, preferências do consumidor e ciclos de inovação.</p>
-                            <p>Uma técnica comum para avaliar os riscos em tecnologia é o uso da <strong>análise SWOT</strong> (forças, fraquezas, oportunidades e ameaças), que ajuda a identificar riscos internos e externos, e a <strong>simulação de Monte Carlo</strong>, que pode modelar o impacto financeiro de diferentes níveis de adoção de uma tecnologia.</p>
-                            <ul>
-                                <li><strong>Identificação de Riscos:</strong> Obsolescência tecnológica, rápida evolução do mercado, aceitação do consumidor.</li>
-                                <li><strong>Análise:</strong> Análise de cenários para prever diferentes taxas de adoção e impacto na receita.</li>
-                                <li><strong>Mitigação:</strong> Estratégias de inovação contínua, parcerias estratégicas e forte investimento em pesquisa e desenvolvimento (P&D).</li>
-                                <li><strong>Exemplo Real:</strong> O lançamento do Google Glass enfrentou grandes incertezas quanto à aceitação do consumidor, levando o produto a falhar comercialmente, apesar das altas expectativas iniciais. Empresas de tecnologia frequentemente enfrentam esse tipo de risco ao introduzir novas inovações.</li>
-                            </ul>
+                <!-- Exemplo 2: Gestão de Projetos -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingExemplo2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo2" aria-expanded="false" aria-controls="collapseExemplo2">
+                            Exemplo 2: Gestão de Projetos
+                        </button>
+                    </h2>
+                    <div id="collapseExemplo2" class="accordion-collapse collapse" aria-labelledby="headingExemplo2" data-bs-parent="#exemplosAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Project_management_process.jpg/800px-Project_management_process.jpg" class="img-fluid rounded mb-3 imgA" alt="Gestão de Projetos">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Na gestão de grandes projetos, como construção de infraestrutura, a incerteza pode vir de diversas fontes: mudanças nas condições climáticas, atrasos de cronograma, aumento nos custos de materiais, entre outros. A avaliação de riscos permite que as equipes de gerenciamento identifiquem essas incertezas e planejem medidas de mitigação.</p>
+                                    <p>A <strong>análise de valor esperado</strong> (Expected Monetary Value - EMV) é uma técnica comum usada para calcular o impacto potencial dos riscos ao projeto. Além disso, uma <strong>matriz de riscos</strong> pode ser usada para classificar os riscos de acordo com a probabilidade e o impacto, ajudando a priorizar as ações preventivas.</p>
+                                    <ul>
+                                        <li><strong>Identificação de Riscos:</strong> Condições climáticas adversas, falhas técnicas, aumento de custos de fornecedores.</li>
+                                        <li><strong>Análise:</strong> Análise qualitativa para priorizar os riscos e quantitativa para calcular o impacto financeiro.</li>
+                                        <li><strong>Mitigação:</strong> Alocação de contingências no orçamento, planejamento de cronogramas flexíveis e contratos com cláusulas de ajuste de preço.</li>
+                                        <li><strong>Exemplo Real:</strong> Em projetos de grandes barragens, como a Hidrelétrica de Belo Monte no Brasil, as incertezas sobre o impacto ambiental e atrasos no licenciamento causaram mudanças significativas no cronograma e aumento de custos.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Adicione mais exemplos reais conforme necessário -->
-    </div>
-</section>
+                <!-- Exemplo 3: Indústria de Tecnologia -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingExemplo3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExemplo3" aria-expanded="false" aria-controls="collapseExemplo3">
+                            Exemplo 3: Indústria de Tecnologia
+                        </button>
+                    </h2>
+                    <div id="collapseExemplo3" class="accordion-collapse collapse" aria-labelledby="headingExemplo3" data-bs-parent="#exemplosAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Technology_Evolution.png/800px-Technology_Evolution.png" class="img-fluid rounded mb-3 imgA" alt="Indústria de Tecnologia">
+                                </div>
+                                <div class="col-md-6">
+                                    <p>O setor de tecnologia é altamente dinâmico e incerto. O desenvolvimento de novas tecnologias pode ser afetado por incertezas quanto à adoção do mercado, mudanças regulatórias ou até surgimento de concorrentes disruptivos. A avaliação de riscos nesse setor envolve a análise de tendências tecnológicas, preferências do consumidor e ciclos de inovação.</p>
+                                    <p>Uma técnica comum para avaliar os riscos em tecnologia é o uso da <strong>análise SWOT</strong> (forças, fraquezas, oportunidades e ameaças), que ajuda a identificar riscos internos e externos, e a <strong>simulação de Monte Carlo</strong>, que pode modelar o impacto financeiro de diferentes níveis de adoção de uma tecnologia.</p>
+                                    <ul>
+                                        <li><strong>Identificação de Riscos:</strong> Obsolescência tecnológica, rápida evolução do mercado, aceitação do consumidor.</li>
+                                        <li><strong>Análise:</strong> Análise de cenários para prever diferentes taxas de adoção e impacto na receita.</li>
+                                        <li><strong>Mitigação:</strong> Estratégias de inovação contínua, parcerias estratégicas e forte investimento em pesquisa e desenvolvimento (P&D).</li>
+                                        <li><strong>Exemplo Real:</strong> O lançamento do Google Glass enfrentou grandes incertezas quanto à aceitação do consumidor, levando o produto a falhar comercialmente, apesar das altas expectativas iniciais. Empresas de tecnologia frequentemente enfrentam esse tipo de risco ao introduzir novas inovações.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
         <!-- Conclusão -->

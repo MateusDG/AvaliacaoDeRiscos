@@ -62,6 +62,12 @@ h2::after {
     display: block;
 }
 
+.imgA {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
 /* Responsividade geral */
 @media (max-width: 1200px) {
     .chart-container canvas {

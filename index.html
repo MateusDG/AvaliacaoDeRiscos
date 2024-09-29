@@ -99,50 +99,67 @@
 
         <!-- Técnicas -->
         <section id="tecnicas" class="mb-5">
-            <h2 class="mb-4"><i class="fas fa-tools"></i> Técnicas de Avaliação de Riscos</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Análise SWOT -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="analise-swot-exemplo.webp" class="card-img-top" alt="Análise SWOT">
-                        <div class="card-body">
-                            <h5 class="card-title">Análise SWOT</h5>
-                            <p class="card-text"><strong>Strengths (Forças)</strong>, <strong>Weaknesses (Fraquezas)</strong>, <strong>Opportunities (Oportunidades)</strong>, e <strong>Threats (Ameaças)</strong> são identificados para mapear fatores internos e externos que podem impactar o sucesso de um projeto ou organização.</p>
-                        </div>
+            <h2 class="mb-4"><i class="fas fa-tools"></i> Algumas Técnicas de Avaliação de Riscos</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Avaliação de risco qualitativa
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Esta é uma técnica inicial usada para identificar e priorizar riscos com base em sua probabilidade de ocorrência e no impacto potencial. As avaliações qualitativas são normalmente subjetivas e se baseiam em opiniões de especialistas, sem a necessidade de dados numéricos precisos.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Brainstorming</strong></li>
+                            <li class="list-group-item"><strong>Entrevistas e Questionários</strong></li>
+                            <li class="list-group-item"><strong>Matriz de Probabilidade e Impacto</strong></li>
+                          </ul>
+                        <img src="https://advisera.com/wp-content/uploads/sites/5/2017/03/Qualitative_risk_assessments_PT.png" class="img-fluid rounded mb-3 imgA" alt="Matriz de Prob">
+                        <p>Usa uma matriz para classificar riscos de acordo com sua probabilidade de ocorrer (alta, média, baixa) e impacto (alto, médio, baixo). Os riscos mais significativos são priorizados para um exame mais detalhado.</p>
                     </div>
+                  </div>
                 </div>
-                <!-- FMEA -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/FMEA_Table.png/800px-FMEA_Table.png" class="card-img-top" alt="FMEA">
-                        <div class="card-body">
-                            <h5 class="card-title">FMEA (Failure Modes and Effects Analysis)</h5>
-                            <p class="card-text">FMEA é uma metodologia sistemática para identificar modos de falha potenciais em um sistema, produto ou processo, avaliando seus efeitos e priorizando as ações corretivas para mitigar os riscos associados.</p>
-                        </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Avaliação de risco quantitativa
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>Esta técnica usa métodos matemáticos e estatísticos para medir e analisar os riscos. Ela é mais precisa e objetiva do que a análise qualitativa e fornece uma visão mais detalhada dos riscos.</p>
+                      <p>A avaliação quantitativa dos riscos muitas vezes faz uso destes conceitos:</p>
+                      <p><strong>SLE (Single Loss Expectancy – Expectativa de uma única perda)</strong>: dinheiro que se espera perder caso um incidente ocorra uma vez.</p>
+                      <p><strong>ARO (Annual Rate of Occurrence – Taxa anual de ocorrência)</strong>: quantas vezes dentro de um período de um ano se espera que o incidente ocorra.</p>
+                      <p><strong>ALE (Annual Loss Expectancy – Expectativa de perda anual)</strong>: dinheiro que se espera perder em um ano considerando o SLE e o ARO (ALE = SLE * ARO). Para a avaliação de risco quantitativa, este é o valor do risco.</p>
+                      <p>Exemplo de uso:</p>
+                      <p>Valor da base de dados: USD 2,5 milhões (SLE)<br>
+                        Estatísticas do fabricante informam que uma falha catastrófica da base de dados (devido a software ou hardware) ocorre uma vez a cada 10 anos (ARO = 1/10 = 0.1)<br>
+                        <strong>ALE = 2,5 * 0,1 = USD 250K</strong><br><br></p>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Simulação de Monte Carlo</strong></li>
+                        <li class="list-group-item"><strong>Análise de Valor Esperado (EVA - Expected Value Analysis)</strong></li>
+                        <li class="list-group-item"><strong>Árvore de Decisão</strong></li>
+                      </ul>
+                      <img src="https://estatsite.com.br/wp-content/uploads/2016/06/1.png" class="img-fluid rounded mb-3" alt="Arvore de Decisão">
                     </div>
+                  </div>
                 </div>
-                <!-- Diagrama de Ishikawa -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Ishikawa_diagram.svg/800px-Ishikawa_diagram.svg.png" class="card-img-top" alt="Diagrama de Ishikawa">
-                        <div class="card-body">
-                            <h5 class="card-title">Diagrama de Ishikawa</h5>
-                            <p class="card-text">Também conhecido como diagrama de causa e efeito ou diagrama espinha de peixe, é utilizado para identificar, explorar e representar graficamente todas as possíveis causas de um determinado problema ou evento de risco.</p>
-                        </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Análise SWOT
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>Embora mais usada para análise estratégica, a análise SWOT (Strengths, Weaknesses, Opportunities, Threats) pode ser adaptada para a avaliação de riscos, ajudando a identificar ameaças e fraquezas no ambiente interno e externo de uma organização ou projeto.</p>
+                        <img src="https://storage.googleapis.com/meetime-blog/wp-content/uploads/2023/08/b38deb9f-colorful-modern-swot-analysis-graph-1.png" class="img-fluid rounded mb-3 imgA" alt="Análise SWOT">
                     </div>
+                  </div>
                 </div>
-                <!-- Matriz de Risco -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Risk_matrix.svg/800px-Risk_matrix.svg.png" class="card-img-top" alt="Matriz de Risco">
-                        <div class="card-body">
-                            <h5 class="card-title">Matriz de Risco</h5>
-                            <p class="card-text">Ferramenta visual que classifica os riscos com base na sua probabilidade de ocorrência e no impacto que podem causar, facilitando a priorização das ações de mitigação.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Adicione mais técnicas conforme necessário -->
-            </div>
+              </div>
         </section>
 
         <!-- Simulação Interativa -->

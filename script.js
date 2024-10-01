@@ -128,13 +128,15 @@ function desenharGrafico(dadosArray, capitalInicial) {
     });
 }
 
-// Função para exibir resultados de acertos e erros na página
-function exibirResultados(dadosArray) {
+// Função para exibir resultados de acertos, erros, capital final e lucro do cassino na página
+function exibirResultados(dadosArray, valorJogo) {
     const resultsDiv = document.getElementById('simulationResults');
     const totalJogosSpan = document.getElementById('totalJogos');
     const totalAcertosSpan = document.getElementById('totalAcertos');
     const totalErrosSpan = document.getElementById('totalErros');
     const capitalFinalSpan = document.getElementById('capitalFinal');
+    const probabilidadeVencerSpan = document.getElementById('probabilidadeVencer');
+    const lucroCassinoSpan = document.getElementById('lucroCassino'); // Novo Elemento
 
     // Calcular totais agregados
     let totalJogos = 0;
@@ -153,10 +155,20 @@ function exibirResultados(dadosArray) {
     const numJogadores = dadosArray.length;
     const capitalFinalMedio = capitalFinalTotal / numJogadores;
 
-    document.getElementById('totalJogos').textContent = totalJogos;
-    document.getElementById('totalAcertos').textContent = totalAcertos;
-    document.getElementById('totalErros').textContent = totalErros;
-    document.getElementById('capitalFinal').textContent = `${capitalFinalMedio.toFixed(2)} (Média de ${numJogadores} jogadores)`;
+    // Calcular a probabilidade de vencer
+    const probabilidadeVencer = (totalAcertos / totalJogos) * 100;
+
+    // Calcular o lucro do cassino
+    // Lucro = (Total de Erros * Valor por Jogo) - (Total de Acertos * Valor por Jogo)
+    const lucroCassino = (totalErros - totalAcertos) * valorJogo;
+
+    // Atualizar os elementos na página
+    totalJogosSpan.textContent = totalJogos;
+    totalAcertosSpan.textContent = totalAcertos;
+    totalErrosSpan.textContent = totalErros;
+    capitalFinalSpan.textContent = `${capitalFinalMedio.toFixed(2)} (Média de ${numJogadores} jogadores)`;
+    probabilidadeVencerSpan.textContent = probabilidadeVencer.toFixed(2);
+    lucroCassinoSpan.textContent = lucroCassino.toFixed(2); // Atualizar o Lucro do Cassino
 
     // Mostrar a div de resultados
     resultsDiv.style.display = 'block';
@@ -226,10 +238,8 @@ document.getElementById('simulationForm').addEventListener('submit', function(e)
     // Desenhar gráfico
     desenharGrafico(simulacoes, capitalInicial);
 
-    // Exibir resultados
-    exibirResultados(simulacoes);
+    // Exibir resultados, passando também o valor do jogo para calcular o lucro do cassino
+    exibirResultados(simulacoes, valorJogo);
 });
 
 document.getElementById('probErro').addEventListener('input', sincronizarProbabilidades);
-
-

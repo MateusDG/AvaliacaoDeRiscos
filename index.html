@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação de Riscos Sob Incertezas</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avaliação de Riscos Sob Incertezas</title>
+        <!-- Bootstrap CSS CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome CDN -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- MathJax CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
 <body>
 
     <!-- Cabeçalho -->
@@ -170,7 +172,8 @@
         <!-- Simulação Interativa -->
 <section id="simulacao" class="simulation mb-5">
     <h2 class="mb-4"><i class="fas fa-chart-line"></i> Simulação de Monte Carlo</h2>
-    
+
+        
     <!-- Explicação sobre Cassinos sem fluxograma -->
     <div class="mb-5">
         <h3 class="mb-3"><i class="fas fa-info-circle"></i> Como a Simulação de Monte Carlo Influencia os Cassinos</h3>
@@ -180,107 +183,118 @@
             <li class="list-group-item"><strong>Modelagem de Riscos:</strong> Os cassinos utilizam a simulação para prever resultados e gerenciar riscos financeiros.</li>
             <li class="list-group-item"><strong>Estratégias de Mitigação:</strong> Diversificação de jogos, ajustes nas probabilidades e gerenciamento de fluxo de caixa baseado em simulações.</li>
             <li class="list-group-item"><strong>Impacto nas Pessoas:</strong> Apesar das vitórias ocasionais, a longo prazo, a maioria dos jogadores perde dinheiro devido à vantagem estatística dos cassinos.</li>
+            <!-- Novo Item Adicionado com Fórmula Melhorada -->
+            <li class="list-group-item"><strong>Probabilidade de Vencer:</strong> A probabilidade de vencer é calculada da seguinte forma:
+                <br><br>
+                <strong>
+                    Probabilidade de Vencer (%) = \(\frac{\text{Partidas Vencidas}}{\text{Partidas Jogadas}} \times 100\)
+                </strong>
+            </li>
+            
+            
         </ul>
     </div>
 
-<!-- Impacto Atual no Brasil com nova imagem -->
-<div class="mb-5">
-    <h3 class="mb-3"><i class="fas fa-exclamation-triangle"></i> Impacto Atual no Brasil</h3>
-    <ul class="list-group list-group-flush mb-4"> <!-- Adicionando espaçamento com mb-4 -->
-        <li class="list-group-item"><strong>Crescimento das Apostas Online:</strong> A popularização das plataformas de jogos de azar digitais tem aumentado significativamente o número de apostadores no Brasil.</li>
-        <li class="list-group-item"><strong>Perdas Financeiras:</strong> Estima-se que milhares de brasileiros estejam perdendo dinheiro regularmente em cassinos online.</li>
-        <li class="list-group-item"><strong>Falta de Regulamentação:</strong> A ausência de legislação específica dificulta a fiscalização e proteção dos consumidores.</li>
-        <li class="list-group-item"><strong>Consequências Sociais:</strong> Aumento de casos de vício em jogos, endividamento e problemas familiares relacionados às perdas financeiras.</li>
-        <li class="list-group-item"><strong>Necessidade de Conscientização:</strong> É essencial promover a educação financeira e conscientizar sobre os riscos dos jogos de azar.</li>
-    </ul>
-    <!-- Envolvendo a imagem com um div text-center -->
-    <div class="text-center">
-        <img src="image/bets.jpg" class="img-fluid rounded mb-3 imgA w-50" alt="Impacto Atual no Brasil">
-    </div>
-    <!-- Fonte do TecMundo -->
-    <p class="text-muted mt-3">Fonte: <a href="https://www.tecmundo.com.br/mercado/290017-bets-receber-r-216-bilhoes-apostadores-somente-2024.htm" target="_blank" rel="noopener noreferrer">TecMundo - Apostas esportivas devem receber R$ 216 bilhões dos brasileiros em 2024</a></p>
-</div>
+        </div>
 
-
-</div>
-
-    <!-- Formulário de Simulação Envolvido em um Card -->
-<div class="card mb-4">
-    <div class="card-body">
-        <h4 class="card-title mb-4"><i class="fas fa-calculator"></i> Configurações da Simulação</h4>
-        <form id="simulationForm">
-            <div class="row g-3">
-                <!-- Capital Inicial -->
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="capitalInicial" class="form-label">Capital Inicial (R$):</label>
-                        <input type="number" class="form-control" id="capitalInicial" name="capitalInicial" value="1000" min="0" required>
+        <!-- Formulário de Simulação Envolvido em um Card -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title mb-4"><i class="fas fa-calculator"></i> Configurações da Simulação</h4>
+                <form id="simulationForm">
+                    <div class="row g-3">
+                        <!-- Capital Inicial -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="capitalInicial" class="form-label">Capital Inicial (R$):</label>
+                                <input type="number" class="form-control" id="capitalInicial" name="capitalInicial" value="1000" min="0" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Valor por Jogo -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="valorJogo" class="form-label">Valor por Jogo (R$):</label>
+                                <input type="number" class="form-control" id="valorJogo" name="valorJogo" value="10" min="0" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Probabilidade de Erro -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="probErro" class="form-label">Probabilidade de Erro (%):</label>
+                                <input type="number" class="form-control" id="probErro" name="probErro" value="50" min="0" max="100" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Probabilidade de Acerto (Somente Leitura) -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="probAcerto" class="form-label">Probabilidade de Acerto (%):</label>
+                                <input type="number" class="form-control" id="probAcerto" name="probAcerto" value="50" min="0" max="100" required readonly>
+                            </div>
+                        </div>
+                        
+                        <!-- Número de Jogos -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="numJogos" class="form-label">Número de Jogos:</label>
+                                <input type="number" class="form-control" id="numJogos" name="numJogos" value="100" min="1" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Novo Campo: Número de Jogadores -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="numJogadores" class="form-label">Número de Jogadores:</label>
+                                <input type="number" class="form-control" id="numJogadores" name="numJogadores" value="1" min="1" required>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Valor por Jogo -->
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="valorJogo" class="form-label">Valor por Jogo (R$):</label>
-                        <input type="number" class="form-control" id="valorJogo" name="valorJogo" value="10" min="0" required>
-                    </div>
-                </div>
-                
-                <!-- Probabilidade de Erro -->
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="probErro" class="form-label">Probabilidade de Erro (%):</label>
-                        <input type="number" class="form-control" id="probErro" name="probErro" value="50" min="0" max="100" required>
-                    </div>
-                </div>
-                
-                <!-- Probabilidade de Acerto (Somente Leitura) -->
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="probAcerto" class="form-label">Probabilidade de Acerto (%):</label>
-                        <input type="number" class="form-control" id="probAcerto" name="probAcerto" value="50" min="0" max="100" required readonly>
-                    </div>
-                </div>
-                
-                <!-- Número de Jogos -->
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="numJogos" class="form-label">Número de Jogos:</label>
-                        <input type="number" class="form-control" id="numJogos" name="numJogos" value="100" min="1" required>
-                    </div>
-                </div>
-                
-                <!-- Novo Campo: Número de Jogadores -->
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="numJogadores" class="form-label">Número de Jogadores:</label>
-                        <input type="number" class="form-control" id="numJogadores" name="numJogadores" value="1" min="1" required>
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-success w-100"><i class="fas fa-play"></i> Simular</button>
+                </form>
             </div>
-            <button type="submit" class="btn btn-success w-100"><i class="fas fa-play"></i> Simular</button>
-        </form>
+        </div>
+        
+        
+            <!-- Resultados da Simulação -->
+            <div class="simulation-results p-4 bg-light rounded mb-4" id="simulationResults" style="display: none;">
+                <h3>Resultados da Simulação</h3>
+                <p><strong>Total de Jogos:</strong> <span id="totalJogos">0</span></p>
+                <p><strong>Acertos:</strong> <span id="totalAcertos">0</span></p>
+                <p><strong>Erros:</strong> <span id="totalErros">0</span></p>
+                <p><strong>Capital Final:</strong> R$ <span id="capitalFinal">0.00</span></p>
+                <!-- Exibição da Probabilidade de Vencer -->
+                <p><strong>Probabilidade de Vencer (%):</strong> <span id="probabilidadeVencer">0</span>%</p>
+                <p><strong>Lucro do Cassino:</strong> R$ <span id="lucroCassino">0.00</span></p>
+            </div>
+        
+            <!-- Gráfico da Simulação -->
+            <div class="mt-4 chart-container">
+                <canvas id="resultadoChart"></canvas>
+                <p class="canvas-description"><strong>Figura 5:</strong> Evolução do capital ao longo dos jogos, comparando com o capital inicial.</p>
+            </div>
+
+            <!-- Impacto Atual no Brasil com nova imagem -->
+    <div class="mb-5">
+        <h3 class="mb-3"><i class="fas fa-exclamation-triangle"></i> Impacto Atual no Brasil</h3>
+        <ul class="list-group list-group-flush mb-4"> <!-- Adicionando espaçamento com mb-4 -->
+            <li class="list-group-item"><strong>Crescimento das Apostas Online:</strong> A popularização das plataformas de jogos de azar digitais tem aumentado significativamente o número de apostadores no Brasil.</li>
+            <li class="list-group-item"><strong>Perdas Financeiras:</strong> Estima-se que milhares de brasileiros estejam perdendo dinheiro regularmente em cassinos online.</li>
+            <li class="list-group-item"><strong>Falta de Regulamentação:</strong> A ausência de legislação específica dificulta a fiscalização e proteção dos consumidores.</li>
+            <li class="list-group-item"><strong>Consequências Sociais:</strong> Aumento de casos de vício em jogos, endividamento e problemas familiares relacionados às perdas financeiras.</li>
+            <li class="list-group-item"><strong>Necessidade de Conscientização:</strong> É essencial promover a educação financeira e conscientizar sobre os riscos dos jogos de azar.</li>
+        </ul>
+        <!-- Envolvendo a imagem com um div text-center -->
+        <div class="text-center">
+            <img src="image/bets.jpg" class="img-fluid rounded mb-3 imgA w-50" alt="Impacto Atual no Brasil">
+        </div>
+        <!-- Fonte do TecMundo -->
+        <p class="text-muted mt-3">Fonte: <a href="https://www.tecmundo.com.br/mercado/290017-bets-receber-r-216-bilhoes-apostadores-somente-2024.htm" target="_blank" rel="noopener noreferrer">TecMundo - Apostas esportivas devem receber R$ 216 bilhões dos brasileiros em 2024</a></p>
     </div>
-</div>
 
-
-    <!-- Resultados da Simulação -->
-    <div class="simulation-results p-4 bg-light rounded mb-4" id="simulationResults" style="display: none;">
-        <h3>Resultados da Simulação</h3>
-        <p><strong>Total de Jogos:</strong> <span id="totalJogos">0</span></p>
-        <p><strong>Acertos:</strong> <span id="totalAcertos">0</span></p>
-        <p><strong>Erros:</strong> <span id="totalErros">0</span></p>
-        <p><strong>Capital Final:</strong> R$ <span id="capitalFinal">0.00</span></p>
-    </div>
-
-    <!-- Gráfico da Simulação -->
-    <div class="mt-4 chart-container">
-        <canvas id="resultadoChart"></canvas>
-        <p class="canvas-description"><strong>Figura 5:</strong> Evolução do capital ao longo dos jogos, comparando com o capital inicial.</p>
-    </div>
-</section>
-
-
+        </section>
+    
         <!-- Exemplos Reais -->
         <section id="exemplos" class="mb-5">
             <h2 class="mb-4"><i class="fas fa-industry"></i> Estudos de Casos</h2>
@@ -353,18 +367,18 @@
         </section>
 
         <!-- Recursos Adicionais -->
-<section id="recursos" class="mb-5">
-    <h2 class="mb-4"><i class="fas fa-book"></i> Referências</h2>
-    <ul class="list-group">
-        <li class="list-group-item"><a href="https://www.investopedia.com/terms/r/risk.asp" target="_blank">Investopedia - Risco</a></li>
-        <li class="list-group-item"><a href="https://www.ibm.com/br-pt/topics/monte-carlo-simulation" target="_blank">Simulação de Monte Carlo - IBM</a></li>
-        <li class="list-group-item"><a href="https://www.cin.ufpe.br/~if717/Pmbok2000/pmbok_v2p/wsp_11.3.html" target="_blank">UFPE - Avaliação Qualitativa de Riscos</a></li>
-        <li class="list-group-item"><a href="https://www.cin.ufpe.br/~if717/Pmbok2000/pmbok_v2p/wsp_11.4.html" target="_blank">UFPE - Avaliação Quantitativa de Riscos</a></li>
-        <li class="list-group-item"><a href="https://rockcontent.com/br/blog/como-fazer-uma-analise-swot/" target="_blank">Rockcontent - Análise SWOT</a></li>
-        <li class="list-group-item"><a href="https://pt.wikipedia.org/wiki/Crise_financeira_de_2007%E2%80%932008" target="_blank">Wikipedia - Crise Financeira Global de 2008 e Gestão de Riscos</a></li>
-        <li class="list-group-item"><a href="https://exame.com/tecnologia/o-que-podemos-aprender-com-o-fracasso-do-google-glass/" target="_blank">Exame - O Fracasso do Google Glass</a></li>
-    </ul>
-</section>
+        <section id="recursos" class="mb-5">
+            <h2 class="mb-4"><i class="fas fa-book"></i> Referências</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://www.investopedia.com/terms/r/risk.asp" target="_blank">Investopedia - Risco</a></li>
+                <li class="list-group-item"><a href="https://www.ibm.com/br-pt/topics/monte-carlo-simulation" target="_blank">Simulação de Monte Carlo - IBM</a></li>
+                <li class="list-group-item"><a href="https://www.cin.ufpe.br/~if717/Pmbok2000/pmbok_v2p/wsp_11.3.html" target="_blank">UFPE - Avaliação Qualitativa de Riscos</a></li>
+                <li class="list-group-item"><a href="https://www.cin.ufpe.br/~if717/Pmbok2000/pmbok_v2p/wsp_11.4.html" target="_blank">UFPE - Avaliação Quantitativa de Riscos</a></li>
+                <li class="list-group-item"><a href="https://rockcontent.com/br/blog/como-fazer-uma-analise-swot/" target="_blank">Rockcontent - Análise SWOT</a></li>
+                <li class="list-group-item"><a href="https://pt.wikipedia.org/wiki/Crise_financeira_de_2007%E2%80%932008" target="_blank">Wikipedia - Crise Financeira Global de 2008 e Gestão de Riscos</a></li>
+                <li class="list-group-item"><a href="https://exame.com/tecnologia/o-que-podemos-aprender-com-o-fracasso-do-google-glass/" target="_blank">Exame - O Fracasso do Google Glass</a></li>
+            </ul>
+        </section>
 
     </main>
 

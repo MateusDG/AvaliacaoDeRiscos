@@ -217,3 +217,24 @@ h3 {
     height: auto; /* Mantém a proporção da imagem */
     margin: 0 auto; /* Centraliza a imagem */
 }
+
+.probabilidade {
+    font-size: 1.1em;
+    color: #28a745; /* Cor verde para destacar */
+}
+
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fraction span:first-child {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+
+.fraction span:last-child {
+    padding-top: 2px;
+}

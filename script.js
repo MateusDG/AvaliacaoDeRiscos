@@ -63,7 +63,7 @@ function desenharGrafico(dadosArray, capitalInicial) {
 
     // Preparar datasets para cada jogador
     const datasets = dadosArray.map((dados, index) => ({
-        label: `Jogador ${index + 1}`,
+        label: `Dia ${index + 1}`,
         data: dados.resultados,
         borderColor: getRandomColor(),
         backgroundColor: 'rgba(0,0,0,0)', // Remover preenchimento
